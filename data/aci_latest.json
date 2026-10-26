@@ -1,7 +1,7 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-10-26 11:55",
+ "as_of": "2026-10-26 12:36",
  "status": "live",
  "readings_through": "2026-10-01",
  "scoreboard_through": "2026-10-23",
@@ -35,7 +35,7 @@
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-10-26 05:02",
+  "as_of": "2026-10-26 12:36",
   "data_through": "2026-10-23",
   "tiers": [
    "P1"
@@ -93,7 +93,7 @@
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-10-26 04:45",
+  "as_of": "2026-10-26 12:10",
   "reading_date": "2026-10-01",
   "data_through": {
    "XAUUSD": "2026-10-01",
@@ -164,7 +164,7 @@
   },
   "what_moved": [
    "The M15 return autocorrelation fell 0.8 sd over five days to the 17th percentile of 2021-2024 (favours MR; weighs on TB).",
-   "The daily range vs ATR rose 0.7 sd over five days to the 83th percentile of 2021-2024.",
+   "The daily range vs ATR rose 0.7 sd over five days to the 83rd percentile of 2021-2024.",
    "The volatility ratio (5-day vs 63-day) rose 0.6 sd over five days to the 78th percentile of 2021-2024 (favours TB; weighs on MR, SC)."
   ]
  },
