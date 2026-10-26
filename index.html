@@ -18,7 +18,7 @@ canvas{width:100%;max-height:360px}.foot{color:var(--mut);font-size:13px;margin-
 <h1>Algo Consistency Index <span class="tag" id="ver"></span></h1>
 <p class="sub">Daily reading of whether the market is paying the patterns retail FX/CFD algos trade. Three families: trend/breakout (TB), mean-reversion (MR), session-clock (SC). <span id="status"></span></p>
 <div class="grid" id="cards"></div>
-<div class="card"><h3>Probe index, 2-year history (z of 20-day R per trade vs random control)</h3><canvas id="chart"></canvas><p class="hyp">Hypothetical results of frozen textbook recipes replayed on historical ticks with published costs; not investment performance. Backfill drawn differently from the live record once the live-since date is set.</p></div>
+<div class="card"><h3>Probe index, 2-year history (z of 20-day R per trade vs random control)</h3><canvas id="chart"></canvas><p class="hyp">Hypothetical results of frozen textbook recipes replayed on historical ticks with published costs; not investment performance. Dashed = backfill computed after the fact; solid = readings printed live after the live-since date (the T4 record).</p></div>
 <div class="grid">
  <div class="card"><h3>What moved (Layer 2)</h3><ul id="moved"></ul></div>
  <div class="card"><h3>Scoreboard (Layer 1, coincident, lagging)</h3><table id="sb"></table></div>
@@ -32,14 +32,14 @@ canvas{width:100%;max-height:360px}.foot{color:var(--mut);font-size:13px;margin-
 (async()=>{
  const j=await (await fetch('data/aci_latest.json')).json();
  document.getElementById('ver').textContent='methodology v'+j.methodology_version;
- document.getElementById('status').textContent=(j.status==='live'?'Live since '+j.live_since:'Backfill only; not yet printing live')+' · as of '+j.as_of;
+ document.getElementById('status').textContent=(j.status==='live'?'Live since '+j.live_since:'Backfill only; not yet printing live')+' · published '+j.as_of+(j.readings_through?' · probe readings through '+j.readings_through:'')+(j.scoreboard_through?' · scoreboard through '+j.scoreboard_through:'');
  const col={TB:getComputedStyle(document.documentElement).getPropertyValue('--tb'),MR:getComputedStyle(document.documentElement).getPropertyValue('--mr'),SC:getComputedStyle(document.documentElement).getPropertyValue('--sc')};
  const cards=document.getElementById('cards');
  for(const f of ['TB','MR','SC']){const p=j.probe_index.families[f];cards.insertAdjacentHTML('beforeend',`<div class="card"><h3 style="color:${col[f]}">${f} probe index</h3><div class="big">${p.percentile_2y.toFixed(0)}<span class="tag">pct of 2y</span></div><div class="hyp">z ${p.reading_z.toFixed(2)} · ${p.legs} legs · ${p.trades_20d} trades/20d · ${j.probe_index.date}</div></div>`)}
  cards.insertAdjacentHTML('beforeend',`<div class="card"><h3>Cost regime</h3><div class="big">${j.probe_index.cost_regime_R_per_trade.toFixed(3)}<span class="tag">R/trade</span></div><div class="hyp">spread + commission over ATR-sized risk, 20d, random control</div></div>`);
  const txt=await (await fetch('data/aci_history.csv')).text();const rows=txt.trim().split('\n').map(r=>r.split(','));const h=rows[0];const ix=k=>h.indexOf(k);
  const last=rows.slice(-520);const labels=last.map(r=>r[0]);
- new Chart(document.getElementById('chart'),{type:'line',data:{labels,datasets:['TB','MR','SC'].map(f=>({label:f,data:last.map(r=>+r[ix('probe_'+f)]||null),borderColor:col[f],borderWidth:1.2,pointRadius:0,tension:0.2}))},options:{animation:false,plugins:{legend:{position:'top'}},scales:{x:{ticks:{maxTicksLimit:8}},y:{title:{display:true,text:'z'}}}}});
+ new Chart(document.getElementById('chart'),{type:'line',data:{labels,datasets:['TB','MR','SC'].map(f=>({label:f,data:last.map(r=>+r[ix('probe_'+f)]||null),borderColor:col[f],borderWidth:1.2,pointRadius:0,tension:0.2,segment:{borderDash:c=>(j.live_since&&labels[c.p1DataIndex]<=j.live_since)?[3,3]:undefined}}))},options:{animation:false,plugins:{legend:{position:'top'}},scales:{x:{ticks:{maxTicksLimit:8}},y:{title:{display:true,text:'z'}}}}});
  document.getElementById('moved').innerHTML=(j.pattern_integrity.what_moved||[]).map(s=>`<li>${s}</li>`).join('')||'<li>—</li>';
  const sb=j.scoreboard.families||{};document.getElementById('sb').innerHTML='<tr><th>Family</th><th>Breadth</th><th>Momentum z</th><th>DD load</th><th>Kills</th></tr>'+['TB','MR','SC'].map(f=>sb[f]?`<tr><td>${f}</td><td>${(sb[f].breadth*100).toFixed(0)}%</td><td>${sb[f].M==null?'—':sb[f].M.toFixed(2)}</td><td>${(sb[f].dd_load||0).toFixed(2)}</td><td>${sb[f].kill_count}/${sb[f].n_active}</td></tr>`:`<tr><td>${f}</td><td colspan=4 class="hyp">fewer than 5 production accounts</td></tr>`).join('');
  document.getElementById('mult').innerHTML=j.multipliers.published?'<table>'+Object.entries(j.multipliers.families).map(([f,m])=>`<tr><td>${f}</td><td>×${m.multiplier}</td></tr>`).join('')+'</table>':`<p class="hyp">${j.multipliers.note}</p>`;

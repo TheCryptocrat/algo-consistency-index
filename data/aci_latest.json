@@ -1,8 +1,11 @@
 {
  "methodology_version": "0.2",
- "live_since": null,
- "as_of": "2026-10-26 05:30",
- "status": "backfill",
+ "live_since": "2026-10-26",
+ "as_of": "2026-10-26 11:55",
+ "status": "live",
+ "readings_through": "2026-10-01",
+ "scoreboard_through": "2026-10-23",
+ "public_url": "https://thecryptocrat.github.io/algo-consistency-index/",
  "probe_index": {
   "date": "2026-10-01",
   "reading_variant": "pertrade",
