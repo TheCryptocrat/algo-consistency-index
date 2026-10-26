@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algo Consistency Index</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--mut:#6b6b66;--tb:#1f5fbf;--mr:#d9822b;--sc:#3a9d5d;--card:#fff;--line:#e4e2dc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141413;--fg:#ecebe6;--mut:#a3a29c;--card:#1d1d1b;--line:#33332f}}
+:root[data-theme="dark"]{--bg:#141413;--fg:#ecebe6;--mut:#a3a29c;--card:#1d1d1b;--line:#33332f}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 -apple-system,Segoe UI,Helvetica,Arial,sans-serif}
+main{max-width:980px;margin:0 auto;padding:24px 16px}
+h1{font-size:28px;margin:0 0 4px}.sub{color:var(--mut);margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.card h3{margin:0 0 6px;font-size:14px;color:var(--mut);font-weight:600}.big{font-size:30px;font-weight:700}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--mut);margin-left:6px}
+.hyp{font-size:12px;color:var(--mut)}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
+canvas{width:100%;max-height:360px}.foot{color:var(--mut);font-size:13px;margin-top:28px}
+</style></head><body><main>
+<h1>Algo Consistency Index <span class="tag" id="ver"></span></h1>
+<p class="sub">Daily reading of whether the market is paying the patterns retail FX/CFD algos trade. Three families: trend/breakout (TB), mean-reversion (MR), session-clock (SC). <span id="status"></span></p>
+<div class="grid" id="cards"></div>
+<div class="card"><h3>Probe index, 2-year history (z of 20-day R per trade vs random control)</h3><canvas id="chart"></canvas><p class="hyp">Hypothetical results of frozen textbook recipes replayed on historical ticks with published costs; not investment performance. Backfill drawn differently from the live record once the live-since date is set.</p></div>
+<div class="grid">
+ <div class="card"><h3>What moved (Layer 2)</h3><ul id="moved"></ul></div>
+ <div class="card"><h3>Scoreboard (Layer 1, coincident, lagging)</h3><table id="sb"></table></div>
+ <div class="card"><h3>Sizing multipliers (Layer 3)</h3><div id="mult"></div></div>
+</div>
+<div class="card"><h3>Validation record</h3><table id="val"></table><p class="hyp">Every test is pre-registered before it runs; failures are published. <a href="methodology.html">Methodology and reports</a> · <a href="data/aci_latest.json">JSON</a> · <a href="data/aci_history.csv">CSV history</a></p></div>
+<p class="foot" id="disc"></p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(async()=>{
+ const j=await (await fetch('data/aci_latest.json')).json();
+ document.getElementById('ver').textContent='methodology v'+j.methodology_version;
+ document.getElementById('status').textContent=(j.status==='live'?'Live since '+j.live_since:'Backfill only; not yet printing live')+' · as of '+j.as_of;
+ const col={TB:getComputedStyle(document.documentElement).getPropertyValue('--tb'),MR:getComputedStyle(document.documentElement).getPropertyValue('--mr'),SC:getComputedStyle(document.documentElement).getPropertyValue('--sc')};
+ const cards=document.getElementById('cards');
+ for(const f of ['TB','MR','SC']){const p=j.probe_index.families[f];cards.insertAdjacentHTML('beforeend',`<div class="card"><h3 style="color:${col[f]}">${f} probe index</h3><div class="big">${p.percentile_2y.toFixed(0)}<span class="tag">pct of 2y</span></div><div class="hyp">z ${p.reading_z.toFixed(2)} · ${p.legs} legs · ${p.trades_20d} trades/20d · ${j.probe_index.date}</div></div>`)}
+ cards.insertAdjacentHTML('beforeend',`<div class="card"><h3>Cost regime</h3><div class="big">${j.probe_index.cost_regime_R_per_trade.toFixed(3)}<span class="tag">R/trade</span></div><div class="hyp">spread + commission over ATR-sized risk, 20d, random control</div></div>`);
+ const txt=await (await fetch('data/aci_history.csv')).text();const rows=txt.trim().split('\n').map(r=>r.split(','));const h=rows[0];const ix=k=>h.indexOf(k);
+ const last=rows.slice(-520);const labels=last.map(r=>r[0]);
+ new Chart(document.getElementById('chart'),{type:'line',data:{labels,datasets:['TB','MR','SC'].map(f=>({label:f,data:last.map(r=>+r[ix('probe_'+f)]||null),borderColor:col[f],borderWidth:1.2,pointRadius:0,tension:0.2}))},options:{animation:false,plugins:{legend:{position:'top'}},scales:{x:{ticks:{maxTicksLimit:8}},y:{title:{display:true,text:'z'}}}}});
+ document.getElementById('moved').innerHTML=(j.pattern_integrity.what_moved||[]).map(s=>`<li>${s}</li>`).join('')||'<li>—</li>';
+ const sb=j.scoreboard.families||{};document.getElementById('sb').innerHTML='<tr><th>Family</th><th>Breadth</th><th>Momentum z</th><th>DD load</th><th>Kills</th></tr>'+['TB','MR','SC'].map(f=>sb[f]?`<tr><td>${f}</td><td>${(sb[f].breadth*100).toFixed(0)}%</td><td>${sb[f].M==null?'—':sb[f].M.toFixed(2)}</td><td>${(sb[f].dd_load||0).toFixed(2)}</td><td>${sb[f].kill_count}/${sb[f].n_active}</td></tr>`:`<tr><td>${f}</td><td colspan=4 class="hyp">fewer than 5 production accounts</td></tr>`).join('');
+ document.getElementById('mult').innerHTML=j.multipliers.published?'<table>'+Object.entries(j.multipliers.families).map(([f,m])=>`<tr><td>${f}</td><td>×${m.multiplier}</td></tr>`).join('')+'</table>':`<p class="hyp">${j.multipliers.note}</p>`;
+ document.getElementById('val').innerHTML=Object.entries(j.validation).map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join('');
+ document.getElementById('disc').textContent=j.disclaimer;
+})();
+</script></body></html>

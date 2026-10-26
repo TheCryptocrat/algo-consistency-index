@@ -1,0 +1,22 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>ACI methodology</title><style>body{margin:0;background:#fbfaf7;color:#1d1d1b;font:16px/1.5 -apple-system,Segoe UI,Helvetica,Arial,sans-serif}main{max-width:860px;margin:0 auto;padding:24px 16px}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:6px 8px;border-bottom:1px solid #e4e2dc;text-align:left;vertical-align:top}code{font-size:13px}@media (prefers-color-scheme:dark){body{background:#141413;color:#ecebe6}td,th{border-color:#33332f}}</style></head><body><main><h1>Algo Consistency Index — methodology (v0.2, backfill; not yet live)</h1>
+<h2>What it is</h2>
+<p>A daily reading of whether the market is paying the price patterns retail FX/CFD algorithms trade, computed per mechanism family (trend/breakout, mean-reversion, session-clock) from public market data, validated against live algo panels, with every test pre-registered before it ran and every result, including failures, published here.</p>
+<h2>Three layers</h2>
+<ol>
+<li><b>Probe index (public backbone).</b> Twelve frozen textbook recipes (Donchian 20/10, opening-range breakout, M15 range break, EMA 20/50 cross, RSI(2), Bollinger fade, prior-day level fade, Asian-range fade, fixed-time London entry, post-fix drift, pre-rollover fade, random-entry control) replayed on raw ticks of seventeen symbols with the broker&#x27;s published spread, the raw-feed spread excess around rollover and $4 per lot round-turn commission. Reading per probe and symbol: z-score over the trailing two years of the 20-day R per trade minus the random control&#x27;s R per trade in the same exit geometry. Family index = mean of its legs. Hypothetical, cost-included, never advertised as performance.</li>
+<li><b>Scoreboard (coincident).</b> Breadth, momentum z, realised drawdown load and SPRT kill count across live production accounts, labelled lagging.</li>
+<li><b>Pattern Integrity (leading candidates).</b> Fifteen standardised market-state features and a Regime Drift distance per family; descriptive until the nowcast test passes.</li>
+</ol>
+<h2>Validation ladder and record</h2>
+<table>
+<tr><th>Test</th><th>Question</th><th>Status</th></tr>
+<tr><td>T0</td><td>Do market-state features move with live family P&amp;L?</td><td>Not passed (power 0.18–0.46); descriptive only</td></tr>
+<tr><td>T1</td><td>Do the probes experience what live algos experience?</td><td>Trend family passes under v0.2 on 7 blocks (rho 0.66, CI 0.32–0.83, twin −0.09); mean-reversion and session-clock do not; external panel pending</td></tr>
+<tr><td>T2</td><td>Does market state forecast family probe returns out of sample?</td><td>See report</td></tr>
+<tr><td>T3</td><td>Does the banded sizing rule add return at matched drawdown?</td><td>See report</td></tr>
+<tr><td>T4</td><td>Does it hold for three live months?</td><td>Starts at the first live print</td></tr>
+</table>
+<h2>Rules that apply to every number here</h2>
+<p>Pre-registration before any test; a shift-control twin beside every statistic; day-block statistics; realised drawdown only; costs as published; probe results labelled hypothetical; negatives published; backfill drawn differently from the live record; methodology versioned with 30-day notice and 90-day overlap for major changes.</p>
+<h2>Reports</h2>
+<p>Pre-registrations and reports live in the project repository under <code>aci/phase0</code>, <code>aci/phase1</code>, <code>aci/phase2</code>, <code>aci/phase3</code>.</p><p><a href='index.html'>Back to the index</a></p></main></body></html>
