@@ -97,7 +97,7 @@
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-10-27 06:32",
+  "as_of": "2026-10-27 15:08",
   "reading_date": "2026-10-01",
   "data_through": {
    "XAUUSD": "2026-10-01",
@@ -116,7 +116,15 @@
    "GBPCHF": "2026-10-01",
    "RUSS2000": "2026-10-01",
    "ETHUSD": "2026-10-01",
-   "GBPUSD": "2026-10-01"
+   "GBPUSD": "2026-10-01",
+   "EURJPY": "2026-10-01",
+   "BTCUSD": "2026-10-01",
+   "EURCHF": "2026-10-01",
+   "CADJPY": "2026-10-01",
+   "CHFJPY": "2026-10-01",
+   "AUDCAD": "2026-10-01",
+   "NZDJPY": "2026-10-01",
+   "EURAUD": "2026-10-01"
   },
   "symbols": [
    "XAUUSD",
@@ -135,41 +143,50 @@
    "GBPCHF",
    "RUSS2000",
    "ETHUSD",
-   "GBPUSD"
+   "GBPUSD",
+   "EURJPY",
+   "BTCUSD",
+   "EURCHF",
+   "CADJPY",
+   "CHFJPY",
+   "AUDCAD",
+   "NZDJPY",
+   "EURAUD"
   ],
+  "universe": 25,
   "weighting": "equal (exposure weights pending)",
   "features_z": {
-   "vol_ratio": 0.761,
-   "vol_of_vol": 0.101,
-   "gap_atr": -0.165,
-   "range_atr": 0.66,
-   "er10": 0.456,
-   "er20": 1.009,
-   "ac15_5d": -0.425,
-   "vr5": 0.741,
-   "bo_follow": 0.179,
-   "mr_hit": 0.077,
-   "sess_fid": -0.512,
-   "hl_time_dev": -0.117,
-   "spread_rel": 0.046,
-   "tick_rel": 1.447
+   "vol_ratio": 0.913,
+   "vol_of_vol": 0.268,
+   "gap_atr": -0.228,
+   "range_atr": 0.768,
+   "er10": 0.267,
+   "er20": 0.782,
+   "ac15_5d": -0.259,
+   "vr5": 0.637,
+   "bo_follow": 0.192,
+   "mr_hit": 0.186,
+   "sess_fid": -0.518,
+   "hl_time_dev": -0.002,
+   "spread_rel": -0.051,
+   "tick_rel": 1.285
   },
-  "drift": 4.619,
-  "drift_pct_vs_ref": 91.8,
+  "drift": 4.487,
+  "drift_pct_vs_ref": 91.0,
   "family_drift": {
-   "TB": 2.813,
-   "MR": 2.829,
-   "SC": 1.893
+   "TB": 2.865,
+   "MR": 2.951,
+   "SC": 1.8
   },
   "family_drift_pct_vs_ref": {
-   "TB": 45.4,
-   "MR": 38.9,
-   "SC": 21.3
+   "TB": 52.8,
+   "MR": 47.4,
+   "SC": 15.4
   },
   "what_moved": [
-   "The M15 return autocorrelation fell 0.8 sd over five days to the 17th percentile of 2021-2024 (favours MR; weighs on TB).",
-   "The daily range vs ATR rose 0.7 sd over five days to the 83rd percentile of 2021-2024.",
-   "The volatility ratio (5-day vs 63-day) rose 0.6 sd over five days to the 78th percentile of 2021-2024 (favours TB; weighs on MR, SC)."
+   "The M15 return autocorrelation fell 0.9 sd over five days to the 28th percentile of 2021-2024 (favours MR; weighs on TB).",
+   "The daily range vs ATR rose 0.7 sd over five days to the 87th percentile of 2021-2024.",
+   "The timing of the daily high and low rose 0.6 sd over five days to the 42nd percentile of 2021-2024 (weighs on SC)."
   ]
  },
  "nowcast": {
