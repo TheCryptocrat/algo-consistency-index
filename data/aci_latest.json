@@ -1,10 +1,10 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-10-26 12:36",
+ "as_of": "2026-10-27 06:42",
  "status": "live",
  "readings_through": "2026-10-01",
- "scoreboard_through": "2026-10-23",
+ "scoreboard_through": "2026-10-27",
  "public_url": "https://thecryptocrat.github.io/algo-consistency-index/",
  "probe_index": {
   "date": "2026-10-01",
@@ -35,20 +35,20 @@
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-10-26 12:36",
-  "data_through": "2026-10-23",
+  "as_of": "2026-10-27 06:42",
+  "data_through": "2026-10-27",
   "tiers": [
    "P1"
   ],
   "dd_budget_placeholder": true,
-  "sprt_calibration_fallback_accounts": 56,
+  "sprt_calibration_fallback_accounts": 57,
   "families": {
    "TB": {
     "n_active": 16.0,
     "breadth": 0.25,
     "mom_mean_z": -0.148,
     "mom_se": 0.0896,
-    "M": -1.6525,
+    "M": -1.6524,
     "S": null,
     "dd_load": 0.2961,
     "kill_count": 1.0,
@@ -93,7 +93,7 @@
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-10-26 12:10",
+  "as_of": "2026-10-27 06:32",
   "reading_date": "2026-10-01",
   "data_through": {
    "XAUUSD": "2026-10-01",
