@@ -26,7 +26,7 @@ Decisions taken on 2026-10-27, published here before they take effect, under the
 - **Fourth family, carry/overnight (CO), methodology v0.3:** its pre-registration will be published before any CO reading is computed; the three-family index continues to be printed for 90 days alongside the four-family one. Not before 2026-11-27.
 - **Layer 2 universe:** the market-state features move from the 17 probe symbols to 25 symbols; the probe basket itself stays at the frozen 17. Dated when the first 25-symbol reading prints.
 - **Branding:** the index is published by Prismatic Algos; the page styling changes, the numbers do not.
-- **Publication time:** under review; a move from 06:30 ET to about 18:30 ET (after the 17:00 ET broker close) is proposed, so that one print governs the whole following trading day.
+- **Publication time (effective with the 2026-10-28 print):** the daily print moves from 06:30 ET to 18:30 ET, after the 17:00 ET broker close and the 17:17 ET Bachelier run, so that one print covers the complete broker day and governs the whole following trading day. A print dated D now reads the Scoreboard through day D (before this date it read through D−1). The computation is unchanged.
 
 ## Reports
 Pre-registrations and reports live in the project repository under `aci/phase0`, `aci/phase1`, `aci/phase2`, `aci/phase3`.
