@@ -1,7 +1,7 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-10-28 10:39",
+ "as_of": "2026-10-28 18:44",
  "status": "live",
  "readings_through": "2026-10-01",
  "scoreboard_through": "2026-10-27",
@@ -35,7 +35,7 @@
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-10-28 06:44",
+  "as_of": "2026-10-28 18:44",
   "data_through": "2026-10-27",
   "tiers": [
    "P1"
@@ -97,7 +97,7 @@
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-10-28 06:34",
+  "as_of": "2026-10-28 18:34",
   "reading_date": "2026-10-01",
   "data_through": {
    "XAUUSD": "2026-10-01",
