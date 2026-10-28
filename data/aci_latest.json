@@ -1,7 +1,7 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-10-28 18:44",
+ "as_of": "2026-10-28 19:47",
  "status": "live",
  "readings_through": "2026-10-01",
  "scoreboard_through": "2026-10-27",
@@ -204,7 +204,8 @@
   "T2": "not passed",
   "T3": "not run",
   "T4": "starts at the first live print",
-  "T5": "not passed (2026-10-28): overlays on the raw readings do not beat same-window permutation nulls; trend uninformative (power 0.09-0.18), mean-reversion null, session-clock overlays cost what random halts cost; live pools net-negative"
+  "T5": "not passed (2026-10-28): overlays on the raw readings do not beat same-window permutation nulls; trend uninformative (power 0.09-0.18), mean-reversion null, session-clock overlays cost what random halts cost; live pools net-negative",
+  "T6": "not passed / no change (2026-10-28): no reading construction or learned weighting beats v0.2 out of sample; mean-reversion reading anti-tracks the library MR family (under review); no return persistence to size on; best-of-38 sizing rules inside search-aware nulls; no daily external trend panel obtainable"
  },
  "disclaimer": "Not investment advice. Multipliers, when published, are relative to the reader's own risk. Probe results are hypothetical."
 }
