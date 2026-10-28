@@ -1,7 +1,7 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-10-28 09:52",
+ "as_of": "2026-10-28 10:39",
  "status": "live",
  "readings_through": "2026-10-01",
  "scoreboard_through": "2026-10-27",
@@ -203,7 +203,8 @@
   "T1": "TB passes on 7 blocks under v0.2; MR and SC not; external panel pending",
   "T2": "not passed",
   "T3": "not run",
-  "T4": "starts at the first live print"
+  "T4": "starts at the first live print",
+  "T5": "not passed (2026-10-28): overlays on the raw readings do not beat same-window permutation nulls; trend uninformative (power 0.09-0.18), mean-reversion null, session-clock overlays cost what random halts cost; live pools net-negative"
  },
  "disclaimer": "Not investment advice. Multipliers, when published, are relative to the reader's own risk. Probe results are hypothetical."
 }

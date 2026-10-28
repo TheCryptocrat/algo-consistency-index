@@ -16,6 +16,9 @@ A daily reading of whether the market is paying the price patterns retail FX/CFD
 | T2 | Does market state forecast family probe returns out of sample? | Not passed (fold A 2023: 0 of 12 cells; fold B 2024–25: one cell per model; shift twins met the raw bar more often than the real features). Layer 3 withheld |
 | T3 | Does the banded sizing rule add return at matched drawdown? | Not run (requires T2) |
 | T4 | Does it hold for three live months? | Running since the first live print, 2026-10-26 |
+| T5 | Would acting on the raw readings (halt below the 20th percentile, scale by band, halt after a drift alert) have improved strategy backtests at matched drawdown? | Not passed (2026-10-28): on 105 strategy curves (56 trend, 26 mean-reversion, 23 session-clock) and 150 live accounts, no family or rule beats a same-window permutation null; trend is uninformative (power 0.09–0.18 for +15%), mean-reversion null, session-clock overlays cost what random halts of the same size cost; live family pools were net-negative over 2025-06 → 2026-10. Pre-registration and report in `aci/phase3` |
+
+The T5 result means that the published percentile and drift alert are descriptive: used as naive position-sizing or halt rules on historical trade lists they added nothing measurable, so no sizing or halt guidance is derived from them.
 
 ## Rules that apply to every number here
 Pre-registration before any test; a shift-control twin beside every statistic; day-block statistics; realised drawdown only; costs as published; probe results labelled hypothetical; negatives published; backfill drawn differently from the live record; methodology versioned with 30-day notice and 90-day overlap for major changes.
