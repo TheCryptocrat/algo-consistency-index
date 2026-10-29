@@ -1,7 +1,7 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-10-28 20:11",
+ "as_of": "2026-10-28 21:03",
  "status": "live",
  "readings_through": "2026-10-01",
  "scoreboard_through": "2026-10-27",
@@ -35,7 +35,7 @@
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-10-28 20:11",
+  "as_of": "2026-10-28 21:03",
   "data_through": "2026-10-27",
   "tiers": [
    "P1"
