@@ -1,7 +1,7 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-10-28 23:39",
+ "as_of": "2026-10-28 23:56",
  "status": "live",
  "readings_through": "2026-10-01",
  "scoreboard_through": "2026-10-27",
@@ -192,18 +192,19 @@
  },
  "nowcast": {
   "published": false,
-  "note": "T3 not run: T2 did not pass (pre-registered consequence)"
+  "note": "No nowcast is published: T2 not passed, and the sizing output it was to feed was dropped on 2026-10-28; the Pattern Integrity features stay descriptive"
  },
  "multipliers": {
   "published": false,
-  "note": "T3 not run: T2 did not pass (pre-registered consequence)",
+  "dropped": "2026-10-28",
+  "note": "Dropped from the product on 2026-10-28 (operator decision): T2, T5, T6B and T6C found no forecast value, no overlay value and no return persistence to size on, so the index publishes no sizing instruction. The only risk outputs are the Scoreboard's realised drawdown load and SPRT kill lines (coincident, account-level, lagging by construction).",
   "families": {}
  },
  "validation": {
   "T0": "not passed (low power)",
   "T1": "TB passes on 7 blocks under v0.2; MR and SC not; external panel pending",
   "T2": "not passed",
-  "T3": "not run",
+  "T3": "retired (2026-10-28): the sizing multiplier is dropped from the product; not run",
   "T4": "starts at the first live print",
   "T5": "not passed (2026-10-28): overlays on the raw readings do not beat same-window permutation nulls; trend uninformative (power 0.09-0.18), mean-reversion null, session-clock overlays cost what random halts cost; live pools net-negative",
   "T6": "not passed / no change (2026-10-28): no reading construction or learned weighting beats v0.2 out of sample; mean-reversion reading anti-tracks the library MR family (audited 2026-10-28: the control's cost-regime signal with the sign flipped; probes track nothing; reading kept with a caveat); no return persistence to size on; best-of-38 sizing rules inside search-aware nulls; no daily external trend panel obtainable"
