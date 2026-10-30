@@ -23,6 +23,9 @@ The T6 result means that v0.2 stays as published: no re-tuning of the readings t
 
 The T5 result means that the published percentile and drift alert are descriptive: used as naive position-sizing or halt rules on historical trade lists they added nothing measurable, so no sizing or halt guidance is derived from them.
 
+## Benchmark-relative performance (descriptive)
+**alpha20** compares each live production account with its own family's probe reading. For an account that is active on the reading date and has at least 15 of the previous 20 business days active, alpha20 is the mean of its daily z over those 20 business days (the same per-account z the Scoreboard uses: daily return on start balance over its trailing standard deviation, clipped at ±6) minus the family's probe reading z on the same date, with **beta = 1.0** for every family (fixed, not fitted to any data). The page shows, per family, the reading, the number of accounts scored, the median 20-day account z and median alpha20, and the share of accounts above the benchmark (alpha20 above zero); individual accounts are not published. This is a comparison, not a forecast and not a sizing instruction (T2, T5 and T6 found no forecast, overlay or sizing value in the readings), and the two sides are standardised differently (a daily account z against a two-year z of per-trade R), so alpha20 is not a measured excess return. Descriptive only; no statistical claim is made from it.
+
 ## Rules that apply to every number here
 Pre-registration before any test; a shift-control twin beside every statistic; day-block statistics; realised drawdown only; costs as published; probe results labelled hypothetical; negatives published; backfill drawn differently from the live record; methodology versioned with 30-day notice and 90-day overlap for major changes.
 

@@ -43,6 +43,19 @@ a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}
  <div class="card"><h3>04 / Sizing multipliers · dropped 2026-10-28</h3><div id="mult"></div></div>
 </div>
 <div class="card"><h3>05 / Validation record</h3><table id="val"></table><p class="hyp">Every test is pre-registered before it runs; failures are published. <a href="methodology.html">Methodology, change notices and reports</a> · <a href="data/aci_latest.json">JSON</a> · <a href="data/aci_history.csv">CSV history</a></p></div>
+<!-- aci-alpha:begin -->
+<div class="card" id="alpha-card"><h3>06 / Benchmark-relative · descriptive · live accounts against their family's probe reading</h3><div style="overflow-x:auto"><table id="alpha"></table></div><p class="hyp" id="alpha-note"></p></div>
+<script>
+(async()=>{const j=await (await fetch('data/aci_latest.json')).json();const b=j.benchmark_relative;const card=document.getElementById('alpha-card');if(!b){card.remove();return}
+ const cs=getComputedStyle(document.documentElement);const col={TB:cs.getPropertyValue('--tb').trim(),MR:cs.getPropertyValue('--mr').trim(),SC:cs.getPropertyValue('--sc').trim()};
+ const f2=x=>x==null?'—':(x>=0?'+':'')+x.toFixed(2);
+ document.getElementById('alpha').innerHTML='<tr><th>Family</th><th>Reading z</th><th>Accounts</th><th>Median acct z, 20d</th><th>Median alpha, 20d</th><th>Alpha p25 / p75</th><th>Above benchmark</th></tr>'+['TB','MR','SC'].map(f=>{const a=b.families[f];if(!a)return '';
+  return a.median_alpha20==null?`<tr><td style="color:${col[f]}">${f}</td><td>${f2(a.reading_z)}</td><td>${a.n_scored}</td><td colspan=4 class="hyp">fewer than 5 accounts</td></tr>`
+   :`<tr><td style="color:${col[f]}">${f}</td><td>${f2(a.reading_z)}</td><td>${a.n_scored}</td><td>${f2(a.median_acct_z20)}</td><td>${f2(a.median_alpha20)}</td><td>${f2(a.alpha20_p25)} / ${f2(a.alpha20_p75)}</td><td>${(a.share_above_benchmark*100).toFixed(0)}%</td></tr>`}).join('');
+ document.getElementById('alpha-note').textContent='As of '+b.date+' (the earlier of the last probe reading and the last Scoreboard day sets the date). alpha = mean of the account\'s daily z over the trailing '+b.window_business_days+' business days minus the family probe reading z; beta fixed at 1.0, not fitted. A comparison, not a forecast or a sizing instruction. Aggregates over live production accounts; individual accounts are not shown.';
+})();
+</script>
+<!-- aci-alpha:end -->
 <p class="foot" id="disc"></p>
 <p class="sig">Prismatic Algos · Trade the market from every direction. · Proof, not promises.</p>
 </main>

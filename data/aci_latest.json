@@ -1,10 +1,10 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-10-29 07:40",
+ "as_of": "2026-10-29 21:59",
  "status": "live",
  "readings_through": "2026-10-01",
- "scoreboard_through": "2026-10-27",
+ "scoreboard_through": "2026-10-30",
  "public_url": "https://thecryptocrat.github.io/algo-consistency-index/",
  "probe_index": {
   "date": "2026-10-01",
@@ -36,69 +36,67 @@
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-10-28 21:03",
-  "data_through": "2026-10-27",
+  "as_of": "2026-10-29 21:59",
+  "data_through": "2026-10-30",
   "tiers": [
    "P1"
   ],
-  "trailing_sparse_days_dropped": [
-   "2026-10-28"
-  ],
+  "trailing_sparse_days_dropped": [],
   "membership": "all Bachelier accounts with a family tag and >=10 trading days (decision 2026-10-27); active = first appearance to last trade + 10 business days",
   "dd_budget_placeholder": true,
-  "sprt_calibration_fallback_accounts": 91,
+  "sprt_calibration_fallback_accounts": 92,
   "families": {
    "TB": {
     "n_active": 20.0,
-    "breadth": 0.3333,
-    "mom_mean_z": -0.1833,
-    "mom_se": 0.1202,
-    "M": -1.5249,
-    "S": 55.9322,
-    "dd_load": 0.2262,
+    "breadth": 0.2381,
+    "mom_mean_z": -0.1245,
+    "mom_se": 0.1182,
+    "M": -1.0525,
+    "S": 61.9835,
+    "dd_load": 0.3203,
     "kill_count": 1.0,
     "kill_share": 0.05,
-    "date": "2026-10-27",
+    "date": "2026-10-30",
     "accounts": 28,
-    "S_history_days": 119,
+    "S_history_days": 122,
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    },
    "MR": {
     "n_active": 13.0,
-    "breadth": 0.4615,
-    "mom_mean_z": -0.1412,
-    "mom_se": 0.0556,
-    "M": -2.5384,
-    "S": 1.1152,
-    "dd_load": 0.155,
+    "breadth": 0.2308,
+    "mom_mean_z": -0.0906,
+    "mom_se": 0.0581,
+    "M": -1.5586,
+    "S": 17.6471,
+    "dd_load": 0.1392,
     "kill_count": 3.0,
     "kill_share": 0.2308,
-    "date": "2026-10-27",
+    "date": "2026-10-30",
     "accounts": 28,
-    "S_history_days": 270,
+    "S_history_days": 273,
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    },
    "SC": {
     "n_active": 22.0,
-    "breadth": 0.2174,
-    "mom_mean_z": -0.2344,
-    "mom_se": 0.1094,
-    "M": -2.1417,
-    "S": 11.7073,
+    "breadth": 0.0,
+    "mom_mean_z": -0.1658,
+    "mom_se": 0.0965,
+    "M": -1.7195,
+    "S": 22.1154,
     "dd_load": 0.4193,
-    "kill_count": 9.0,
-    "kill_share": 0.4091,
-    "date": "2026-10-27",
+    "kill_count": 8.0,
+    "kill_share": 0.3636,
+    "date": "2026-10-30",
     "accounts": 66,
-    "S_history_days": 206,
+    "S_history_days": 209,
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    }
   },
-  "headline_S": 22.92
+  "headline_S": 33.92
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-10-28 18:34",
+  "as_of": "2026-10-29 21:49",
   "reading_date": "2026-10-01",
   "data_through": {
    "XAUUSD": "2026-10-01",
@@ -208,6 +206,49 @@
   "T4": "starts at the first live print",
   "T5": "not passed (2026-10-28): overlays on the raw readings do not beat same-window permutation nulls; trend uninformative (power 0.09-0.18), mean-reversion null, session-clock overlays cost what random halts cost; live pools net-negative",
   "T6": "not passed / no change (2026-10-28): no reading construction or learned weighting beats v0.2 out of sample; mean-reversion reading anti-tracks the library MR family (audited 2026-10-28: the control's cost-regime signal with the sign flipped; probes track nothing; reading kept with a caveat); no return persistence to size on; best-of-38 sizing rules inside search-aware nulls; no daily external trend panel obtainable"
+ },
+ "benchmark_relative": {
+  "label": "Descriptive comparison of live production accounts with their family's probe reading; not a forecast, not a sizing instruction",
+  "date": "2026-10-01",
+  "definition": "alpha20 = mean of the account's daily z over the trailing 20 business days minus beta x the family probe reading z on the same date; beta = 1.0 for every family (fixed, not fitted); accounts active on the date with at least 15 of the 20 days active",
+  "beta": {
+   "TB": 1.0,
+   "MR": 1.0,
+   "SC": 1.0
+  },
+  "beta_fitted": false,
+  "window_business_days": 20,
+  "min_days_active": 15,
+  "note": "Descriptive comparison of each live account with its family's probe reading; not a forecast, not a sizing instruction. The two sides are standardised differently (daily z of account returns against a two-year z of per-trade R), so alpha20 is a comparison, not a measured excess return.",
+  "families": {
+   "TB": {
+    "reading_z": 0.0652,
+    "n_scored": 16,
+    "median_acct_z20": -0.1139,
+    "median_alpha20": -0.1791,
+    "alpha20_p25": -0.2704,
+    "alpha20_p75": -0.1317,
+    "share_above_benchmark": 0.1875
+   },
+   "MR": {
+    "reading_z": 0.2426,
+    "n_scored": 13,
+    "median_acct_z20": 0.0483,
+    "median_alpha20": -0.1943,
+    "alpha20_p25": -0.3024,
+    "alpha20_p75": 0.0081,
+    "share_above_benchmark": 0.3077
+   },
+   "SC": {
+    "reading_z": -0.1952,
+    "n_scored": 23,
+    "median_acct_z20": -0.3083,
+    "median_alpha20": -0.1131,
+    "alpha20_p25": -0.3829,
+    "alpha20_p75": 0.032,
+    "share_above_benchmark": 0.3043
+   }
+  }
  },
  "disclaimer": "Not investment advice. No sizing instruction is published. Probe results are hypothetical; benchmark-relative figures are a comparison, not a forecast."
 }
