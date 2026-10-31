@@ -1,7 +1,7 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-10-29 21:59",
+ "as_of": "2026-10-30 21:59",
  "status": "live",
  "readings_through": "2026-10-01",
  "scoreboard_through": "2026-10-30",
@@ -36,7 +36,7 @@
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-10-29 21:59",
+  "as_of": "2026-10-30 21:59",
   "data_through": "2026-10-30",
   "tiers": [
    "P1"
@@ -48,14 +48,14 @@
   "families": {
    "TB": {
     "n_active": 20.0,
-    "breadth": 0.2381,
-    "mom_mean_z": -0.1245,
+    "breadth": 0.1905,
+    "mom_mean_z": -0.1297,
     "mom_se": 0.1182,
-    "M": -1.0525,
-    "S": 61.9835,
-    "dd_load": 0.3203,
-    "kill_count": 1.0,
-    "kill_share": 0.05,
+    "M": -1.0972,
+    "S": 60.3306,
+    "dd_load": 0.2817,
+    "kill_count": 2.0,
+    "kill_share": 0.1,
     "date": "2026-10-30",
     "accounts": 28,
     "S_history_days": 122,
@@ -64,13 +64,13 @@
    "MR": {
     "n_active": 13.0,
     "breadth": 0.2308,
-    "mom_mean_z": -0.0906,
-    "mom_se": 0.0581,
-    "M": -1.5586,
-    "S": 17.6471,
-    "dd_load": 0.1392,
-    "kill_count": 3.0,
-    "kill_share": 0.2308,
+    "mom_mean_z": -0.1145,
+    "mom_se": 0.0583,
+    "M": -1.9635,
+    "S": 7.7206,
+    "dd_load": 0.2131,
+    "kill_count": 2.0,
+    "kill_share": 0.1538,
     "date": "2026-10-30",
     "accounts": 28,
     "S_history_days": 273,
@@ -79,10 +79,10 @@
    "SC": {
     "n_active": 22.0,
     "breadth": 0.0,
-    "mom_mean_z": -0.1658,
-    "mom_se": 0.0965,
-    "M": -1.7195,
-    "S": 22.1154,
+    "mom_mean_z": -0.1721,
+    "mom_se": 0.0964,
+    "M": -1.7859,
+    "S": 18.75,
     "dd_load": 0.4193,
     "kill_count": 8.0,
     "kill_share": 0.3636,
@@ -92,11 +92,11 @@
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    }
   },
-  "headline_S": 33.92
+  "headline_S": 28.93
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-10-29 21:49",
+  "as_of": "2026-10-30 21:49",
   "reading_date": "2026-10-01",
   "data_through": {
    "XAUUSD": "2026-10-01",
