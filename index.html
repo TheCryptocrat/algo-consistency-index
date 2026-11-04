@@ -56,6 +56,21 @@ a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}
 })();
 </script>
 <!-- aci-alpha:end -->
+<!-- aci-c2:begin -->
+<div class="card" id="c2-card"><h3>07 / External panel · Collective2 (descriptive) · outside algos by mechanism family, hypothetical model accounts</h3><div style="overflow-x:auto"><table id="c2"></table></div><p class="hyp" id="c2-note"></p></div>
+<script>
+(async()=>{const j=await (await fetch('data/aci_latest.json')).json();const b=j.external_panel;const card=document.getElementById('c2-card');if(!b){card.remove();return}
+ const cs=getComputedStyle(document.documentElement);const col={TB:cs.getPropertyValue('--tb').trim(),MR:cs.getPropertyValue('--mr').trim(),SC:cs.getPropertyValue('--sc').trim(),ALL:cs.getPropertyValue('--mut').trim()};
+ const f2=x=>x==null?'—':(x>=0?'+':'')+x.toFixed(2);const t=b.t1_external||{families:{}};
+ document.getElementById('c2').innerHTML='<tr><th>Family</th><th>Members</th><th>20-day z</th><th>Pct of 2y</th><th>T1-external</th><th>rho [90% interval]</th><th>Blocks</th></tr>'+['TB','MR','SC','ALL'].map(f=>{const a=b.families[f];if(!a)return '';const v=t.families[f];
+  const z=a.z20==null?'<td colspan=2 class="hyp">'+(a.note||'—')+'</td>':'<td>'+f2(a.z20)+'</td><td>'+a.percentile_2y.toFixed(0)+'</td>';
+  const tt=f==='ALL'?'<td colspan=3 class="hyp">companion, not a gate</td>':(v?'<td>'+v.verdict+'</td><td>'+f2(v.rho)+(v.ci90?' ['+f2(v.ci90[0])+', '+f2(v.ci90[1])+']':'')+'</td><td>'+v.blocks+'</td>':'<td colspan=3 class="hyp">not run</td>');
+  return '<tr><td style="color:'+col[f]+'">'+f+'</td><td>'+a.members+'</td>'+z+tt+'</tr>'}).join('');
+ document.getElementById('c2-note').innerHTML='As of '+b.date+' (the last day with at least 5 members; non-subscribers see a manager\'s record only after its publication delay, so the panel\'s last day can lag the print). 20-day z = mean of the last 20 days of the family\'s standardised return; percentile against its own 2-year history. '
+  +'T1-external: run '+(t.run_date||'—')+' against the probe family index on readings through '+(t.probe_readings_through||'—')+', pre-registered bar rho 0.40 with a +40-day twin and a tag-shuffle control; a family that does not pass is published as it is. '+(b.attrition?' Survivorship: '+b.attrition.n_unserved_snapshot+' of the '+b.attrition.n_snapshot+' strategies in the 2022-01-03 snapshot are no longer served by the API; '+b.attrition.n_members_without_recent_z+' of the '+b.attrition.n_members+' members have no defined return in the last '+b.attrition.recent_window_weekdays+' weekdays (see Method).':'')+' '+b.label+'. Aggregates only. <a href="'+b.history_csv+'">History CSV</a> · <a href="methodology.html">Method</a>';
+})();
+</script>
+<!-- aci-c2:end -->
 <p class="foot" id="disc"></p>
 <p class="sig">Prismatic Algos · Trade the market from every direction. · Proof, not promises.</p>
 </main>
