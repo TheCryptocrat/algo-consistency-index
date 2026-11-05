@@ -1,10 +1,10 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-11-04 15:22",
+ "as_of": "2026-11-04 22:06",
  "status": "live",
  "readings_through": "2026-10-01",
- "scoreboard_through": "2026-11-03",
+ "scoreboard_through": "2026-11-05",
  "public_url": "https://thecryptocrat.github.io/algo-consistency-index/",
  "probe_index": {
   "date": "2026-10-01",
@@ -36,69 +36,67 @@
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-11-03 21:59",
-  "data_through": "2026-11-03",
+  "as_of": "2026-11-04 21:59",
+  "data_through": "2026-11-05",
   "tiers": [
    "P1"
   ],
-  "trailing_sparse_days_dropped": [
-   "2026-11-04"
-  ],
+  "trailing_sparse_days_dropped": [],
   "membership": "all Bachelier accounts with a family tag and >=10 trading days (decision 2026-10-27); active = first appearance to last trade + 10 business days",
   "dd_budget_placeholder": true,
   "sprt_calibration_fallback_accounts": 92,
   "families": {
    "TB": {
     "n_active": 20.0,
-    "breadth": 0.1905,
-    "mom_mean_z": -0.1527,
-    "mom_se": 0.1118,
-    "M": -1.3664,
-    "S": 55.2846,
-    "dd_load": 0.3202,
+    "breadth": 0.5238,
+    "mom_mean_z": -0.1161,
+    "mom_se": 0.1146,
+    "M": -1.0134,
+    "S": 64.0,
+    "dd_load": 0.3312,
     "kill_count": 2.0,
     "kill_share": 0.1,
-    "date": "2026-11-03",
+    "date": "2026-11-05",
     "accounts": 28,
-    "S_history_days": 124,
+    "S_history_days": 126,
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    },
    "MR": {
     "n_active": 13.0,
-    "breadth": 0.3077,
-    "mom_mean_z": -0.1022,
-    "mom_se": 0.0564,
-    "M": -1.8123,
-    "S": 10.219,
-    "dd_load": 0.2389,
+    "breadth": 0.3846,
+    "mom_mean_z": -0.0485,
+    "mom_se": 0.0567,
+    "M": -0.8556,
+    "S": 46.0145,
+    "dd_load": 0.2661,
     "kill_count": 2.0,
     "kill_share": 0.1538,
-    "date": "2026-11-03",
+    "date": "2026-11-05",
     "accounts": 28,
-    "S_history_days": 275,
+    "S_history_days": 277,
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    },
    "SC": {
     "n_active": 9.0,
-    "breadth": 0.0,
-    "mom_mean_z": -0.1977,
-    "mom_se": 0.0987,
-    "M": -2.003,
-    "S": 13.8095,
-    "dd_load": 0.4735,
+    "breadth": 0.1,
+    "mom_mean_z": -0.205,
+    "mom_se": 0.0954,
+    "M": -2.1485,
+    "S": 11.8483,
+    "dd_load": 0.4495,
     "kill_count": 4.0,
     "kill_share": 0.4444,
-    "date": "2026-11-03",
+    "date": "2026-11-04",
     "accounts": 66,
-    "S_history_days": 211,
+    "S_history_days": 212,
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    }
   },
-  "headline_S": 26.44
+  "headline_S": 40.62
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-11-03 21:49",
+  "as_of": "2026-11-04 21:49",
   "reading_date": "2026-10-01",
   "data_through": {
    "XAUUSD": "2026-10-01",
@@ -254,7 +252,7 @@
  },
  "external_panel": {
   "label": "Hypothetical model accounts; descriptive; not investment performance, not a forecast, not a sizing instruction",
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "source": "Collective2 General API v4 (read-only)",
   "route": "daily",
   "commission_plan": 0,
@@ -303,35 +301,35 @@
   },
   "families": {
    "TB": {
-    "members": 6,
-    "z20": -0.209,
-    "percentile_2y": 0.8,
-    "date": "2026-11-03",
+    "members": 2,
+    "z20": -0.238,
+    "percentile_2y": 0.4,
+    "date": "2026-11-04",
     "days_with_ge5_members": 1262,
     "first_day_ge5_members": "2022-01-03"
    },
    "MR": {
-    "members": 10,
-    "z20": -0.062,
-    "percentile_2y": 15.5,
-    "date": "2026-11-03",
+    "members": 0,
+    "z20": -0.051,
+    "percentile_2y": 22.0,
+    "date": "2026-11-04",
     "days_with_ge5_members": 1262,
     "first_day_ge5_members": "2022-01-03"
    },
    "SC": {
-    "members": 13,
-    "z20": -0.074,
-    "percentile_2y": 22.8,
-    "date": "2026-11-03",
+    "members": 4,
+    "z20": -0.06,
+    "percentile_2y": 25.4,
+    "date": "2026-11-04",
     "days_with_ge5_members": 1261,
     "first_day_ge5_members": "2022-01-03"
    },
    "ALL": {
-    "members": 46,
-    "z20": -0.16,
-    "percentile_2y": 0.4,
-    "date": "2026-11-03",
-    "days_with_ge5_members": 1262,
+    "members": 7,
+    "z20": -0.153,
+    "percentile_2y": 0.8,
+    "date": "2026-11-04",
+    "days_with_ge5_members": 1263,
     "first_day_ge5_members": "2022-01-03"
    }
   },
