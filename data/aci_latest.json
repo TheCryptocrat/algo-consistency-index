@@ -1,7 +1,7 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-11-05 22:13",
+ "as_of": "2026-11-06 22:11",
  "status": "live",
  "readings_through": "2026-10-30",
  "scoreboard_through": "2026-11-06",
@@ -36,7 +36,7 @@
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-11-05 22:03",
+  "as_of": "2026-11-06 21:59",
   "data_through": "2026-11-06",
   "tiers": [
    "P1"
@@ -48,11 +48,11 @@
   "families": {
    "TB": {
     "n_active": 20.0,
-    "breadth": 0.3333,
-    "mom_mean_z": -0.0991,
-    "mom_se": 0.1055,
-    "M": -0.9386,
-    "S": 64.2857,
+    "breadth": 0.1429,
+    "mom_mean_z": -0.1287,
+    "mom_se": 0.1047,
+    "M": -1.2291,
+    "S": 58.7302,
     "dd_load": 0.2988,
     "kill_count": 2.0,
     "kill_share": 0.1,
@@ -64,13 +64,13 @@
    "MR": {
     "n_active": 13.0,
     "breadth": 0.3846,
-    "mom_mean_z": -0.0964,
-    "mom_se": 0.0558,
-    "M": -1.7277,
-    "S": 12.6354,
-    "dd_load": 0.2712,
-    "kill_count": 2.0,
-    "kill_share": 0.1538,
+    "mom_mean_z": -0.1129,
+    "mom_se": 0.0559,
+    "M": -2.0195,
+    "S": 6.8592,
+    "dd_load": 0.3206,
+    "kill_count": 3.0,
+    "kill_share": 0.2308,
     "date": "2026-11-06",
     "accounts": 28,
     "S_history_days": 278,
@@ -92,12 +92,12 @@
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    }
   },
-  "headline_S": 30.54
+  "headline_S": 26.76
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-11-05 21:50",
-  "reading_date": "2026-10-01",
+  "as_of": "2026-11-06 21:49",
+  "reading_date": "2026-10-30",
   "data_through": {
    "XAUUSD": "2026-10-30",
    "US500": "2026-10-30",
@@ -119,8 +119,8 @@
    "EURJPY": "2026-10-30",
    "BTCUSD": "2026-10-31",
    "EURCHF": "2026-10-30",
-   "CADJPY": "2026-10-01",
-   "CHFJPY": "2026-10-01",
+   "CADJPY": "2026-10-30",
+   "CHFJPY": "2026-10-30",
    "AUDCAD": "2026-10-30",
    "NZDJPY": "2026-10-30",
    "EURAUD": "2026-10-30"
@@ -155,37 +155,37 @@
   "universe": 25,
   "weighting": "equal (exposure weights pending)",
   "features_z": {
-   "vol_ratio": 0.913,
-   "vol_of_vol": 0.268,
-   "gap_atr": -0.228,
-   "range_atr": 0.768,
-   "er10": 0.267,
-   "er20": 0.782,
-   "ac15_5d": -0.259,
-   "vr5": 0.637,
-   "bo_follow": 0.18,
-   "mr_hit": 0.125,
-   "sess_fid": -0.518,
-   "hl_time_dev": -0.002,
-   "spread_rel": -0.051,
-   "tick_rel": 1.285
+   "vol_ratio": 0.811,
+   "vol_of_vol": 0.321,
+   "gap_atr": 0.002,
+   "range_atr": 0.468,
+   "er10": -0.135,
+   "er20": -0.162,
+   "ac15_5d": -0.063,
+   "vr5": 0.09,
+   "bo_follow": -0.061,
+   "mr_hit": 0.393,
+   "sess_fid": -0.556,
+   "hl_time_dev": 0.236,
+   "spread_rel": -0.005,
+   "tick_rel": 1.394
   },
-  "drift": 4.483,
-  "drift_pct_vs_ref": 91.0,
+  "drift": 4.643,
+  "drift_pct_vs_ref": 91.7,
   "family_drift": {
-   "TB": 2.857,
-   "MR": 2.943,
-   "SC": 1.8
+   "TB": 2.795,
+   "MR": 2.817,
+   "SC": 2.285
   },
   "family_drift_pct_vs_ref": {
-   "TB": 52.7,
-   "MR": 47.1,
-   "SC": 15.4
+   "TB": 50.0,
+   "MR": 39.9,
+   "SC": 42.9
   },
   "what_moved": [
-   "The M15 return autocorrelation fell 0.9 sd over five days to the 28th percentile of 2021-2024 (favours MR; weighs on TB).",
-   "The daily range vs ATR rose 0.7 sd over five days to the 87th percentile of 2021-2024.",
-   "The timing of the daily high and low rose 0.6 sd over five days to the 42nd percentile of 2021-2024 (weighs on SC)."
+   "The mean-reversion hit rate rose 1.0 sd over five days to the 87th percentile of 2021-2024 (favours MR; weighs on TB).",
+   "The session-shape fidelity fell 0.7 sd over five days to the 16th percentile of 2021-2024 (weighs on SC).",
+   "The breakout follow-through rate fell 0.7 sd over five days to the 44th percentile of 2021-2024 (favours MR; weighs on TB)."
   ]
  },
  "nowcast": {
@@ -252,7 +252,7 @@
  },
  "external_panel": {
   "label": "Hypothetical model accounts; descriptive; not investment performance, not a forecast, not a sizing instruction",
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "source": "Collective2 General API v4 (read-only)",
   "route": "daily",
   "commission_plan": 0,
@@ -301,32 +301,32 @@
   },
   "families": {
    "TB": {
-    "members": 2,
+    "members": 4,
     "note": "fewer than 5 members on the as-of day",
     "days_with_ge5_members": 1262,
     "first_day_ge5_members": "2022-01-03"
    },
    "MR": {
-    "members": 8,
-    "z20": 0.028,
-    "percentile_2y": 88.5,
-    "date": "2026-11-04",
+    "members": 7,
+    "z20": -0.072,
+    "percentile_2y": 12.3,
+    "date": "2026-11-05",
     "days_with_ge5_members": 1264,
     "first_day_ge5_members": "2022-01-03"
    },
    "SC": {
     "members": 8,
-    "z20": 0.05,
-    "percentile_2y": 75.8,
-    "date": "2026-11-04",
+    "z20": 0.055,
+    "percentile_2y": 77.8,
+    "date": "2026-11-05",
     "days_with_ge5_members": 1263,
     "first_day_ge5_members": "2022-01-03"
    },
    "ALL": {
-    "members": 23,
-    "z20": -0.078,
-    "percentile_2y": 24.0,
-    "date": "2026-11-04",
+    "members": 25,
+    "z20": -0.125,
+    "percentile_2y": 3.0,
+    "date": "2026-11-05",
     "days_with_ge5_members": 1264,
     "first_day_ge5_members": "2022-01-03"
    }
