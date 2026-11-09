@@ -1,7 +1,7 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-11-07 22:10",
+ "as_of": "2026-11-08 22:09",
  "status": "live",
  "readings_through": "2026-10-30",
  "scoreboard_through": "2026-11-06",
@@ -36,7 +36,7 @@
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-11-07 21:59",
+  "as_of": "2026-11-08 21:59",
   "data_through": "2026-11-06",
   "tiers": [
    "P1"
@@ -96,7 +96,7 @@
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-11-07 21:49",
+  "as_of": "2026-11-08 21:49",
   "reading_date": "2026-10-30",
   "data_through": {
    "XAUUSD": "2026-10-30",
@@ -303,27 +303,27 @@
    "TB": {
     "members": 2,
     "note": "fewer than 5 members on the as-of day",
-    "days_with_ge5_members": 1264,
+    "days_with_ge5_members": 1265,
     "first_day_ge5_members": "2022-01-03"
    },
    "MR": {
-    "members": 9,
-    "z20": -0.035,
-    "percentile_2y": 34.3,
+    "members": 11,
+    "z20": -0.031,
+    "percentile_2y": 39.5,
     "date": "2026-11-06",
     "days_with_ge5_members": 1266,
     "first_day_ge5_members": "2022-01-03"
    },
    "SC": {
-    "members": 4,
+    "members": 3,
     "note": "fewer than 5 members on the as-of day",
     "days_with_ge5_members": 1265,
     "first_day_ge5_members": "2022-01-03"
    },
    "ALL": {
-    "members": 20,
-    "z20": -0.142,
-    "percentile_2y": 1.6,
+    "members": 21,
+    "z20": -0.136,
+    "percentile_2y": 2.0,
     "date": "2026-11-06",
     "days_with_ge5_members": 1266,
     "first_day_ge5_members": "2022-01-03"
