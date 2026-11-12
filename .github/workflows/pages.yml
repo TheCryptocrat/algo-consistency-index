@@ -1,4 +1,4 @@
-# Deploys site/ to GitHub Pages on every push (the research Mac computes the data and pushes; Actions only serves it).
+# The research publisher computes data; Pages applies the shared website brand.
 name: aci-pages
 on:
   push:
@@ -20,8 +20,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Apply the shared Prismatic website stylesheet
+        run: python3 scripts/build_brand_site.py
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
