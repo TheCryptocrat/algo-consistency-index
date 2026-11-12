@@ -40,6 +40,8 @@ main{max-width:1120px;margin:0 auto;padding:12px 24px 56px}
 .brand{color:var(--accent);font-family:var(--ui);font-weight:600;letter-spacing:.14em;margin-top:32px}
 .brand a,a{color:var(--accent)}
 h1{font-family:var(--display);font-size:clamp(32px,4vw,62px);color:var(--ink);letter-spacing:-.035em;margin:12px 0 14px}
+h2,h3,h4,h5,h6,b,strong{color:var(--ink)}
+th{color:var(--muted)}
 .tagline,.sig{color:var(--accent)}
 .sub,.status,.hyp,.foot{color:var(--muted)}
 .status{border:0;background:transparent;padding:0;border-radius:0;display:block}
