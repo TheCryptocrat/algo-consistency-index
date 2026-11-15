@@ -1,7 +1,7 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-11-13 22:23",
+ "as_of": "2026-11-14 22:15",
  "status": "live",
  "readings_through": "2026-10-30",
  "scoreboard_through": "2026-11-13",
@@ -36,7 +36,7 @@
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-11-13 21:59",
+  "as_of": "2026-11-14 21:59",
   "data_through": "2026-11-13",
   "tiers": [
    "P1"
@@ -96,7 +96,7 @@
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-11-13 21:49",
+  "as_of": "2026-11-14 21:49",
   "reading_date": "2026-10-30",
   "data_through": {
    "XAUUSD": "2026-10-30",
@@ -252,13 +252,13 @@
  },
  "external_panel": {
   "label": "Hypothetical model accounts; descriptive; not investment performance, not a forecast, not a sizing instruction",
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "source": "Collective2 General API v4 (read-only)",
   "route": "daily",
   "commission_plan": 0,
   "embargo_days": null,
   "members": 255,
-  "note": "Hypothetical model accounts on Collective2 (forex and futures strategies; simulated fills, default commission plan); each strategy's daily return is the change in its own end-of-day model-account equity. Non-subscribers see a manager's record only after that manager's publication delay, so the panel's last day can lag the print. Aggregates only; individual strategies are not shown. Of the 746 strategies in the 2022-01-03 snapshot, 172 are no longer served by the API, among them 49 of the 173 forex or futures strategies with 30 or more trades at that date, so the panel's 22 dead members understate attrition and the 2022 cohort is not survivorship-free; strategies created after 2022-01-03 that died before the pull are also missing. 156 of the 255 members have no defined standardised return in the last 20 weekdays (flat equity, a series that ended, or a dead strategy); the automation share of the members is not available from the API's details record.",
+  "note": "Hypothetical model accounts on Collective2 (forex and futures strategies; simulated fills, default commission plan); each strategy's daily return is the change in its own end-of-day model-account equity. Non-subscribers see a manager's record only after that manager's publication delay, so the panel's last day can lag the print. Aggregates only; individual strategies are not shown. Of the 746 strategies in the 2022-01-03 snapshot, 172 are no longer served by the API, among them 49 of the 173 forex or futures strategies with 30 or more trades at that date, so the panel's 22 dead members understate attrition and the 2022 cohort is not survivorship-free; strategies created after 2022-01-03 that died before the pull are also missing. 155 of the 255 members have no defined standardised return in the last 20 weekdays (flat equity, a series that ended, or a dead strategy); the automation share of the members is not available from the API's details record.",
   "definition": "Per strategy: daily return standardised by its own trailing 120-day sd (clipped at +-6); family return = equal-weight mean over the family's members with at least 5 members that day; 20-day = mean of the last 20 days (at least 15). Family tags come from each strategy's closed trades (panel-internal terciles, frozen).",
   "attrition": {
    "n_snapshot": 746,
@@ -267,7 +267,7 @@
    "n_cohort_unserved": 49,
    "n_members": 255,
    "n_members_dead": 22,
-   "n_members_without_recent_z": 156,
+   "n_members_without_recent_z": 155,
    "recent_window_weekdays": 20,
    "automation_share": "not available (the details record has no such field)"
   },
@@ -301,35 +301,33 @@
   },
   "families": {
    "TB": {
-    "members": 5,
-    "z20": -0.16,
-    "percentile_2y": 4.0,
-    "date": "2026-11-12",
-    "days_with_ge5_members": 1269,
+    "members": 4,
+    "note": "fewer than 5 members on the as-of day",
+    "days_with_ge5_members": 1270,
     "first_day_ge5_members": "2022-01-03"
    },
    "MR": {
-    "members": 12,
-    "z20": 0.002,
-    "percentile_2y": 69.2,
-    "date": "2026-11-12",
-    "days_with_ge5_members": 1269,
+    "members": 16,
+    "z20": 0.006,
+    "percentile_2y": 71.6,
+    "date": "2026-11-13",
+    "days_with_ge5_members": 1271,
     "first_day_ge5_members": "2022-01-03"
    },
    "SC": {
-    "members": 11,
-    "z20": 0.034,
-    "percentile_2y": 68.5,
-    "date": "2026-11-12",
-    "days_with_ge5_members": 1269,
+    "members": 6,
+    "z20": 0.063,
+    "percentile_2y": 79.4,
+    "date": "2026-11-13",
+    "days_with_ge5_members": 1271,
     "first_day_ge5_members": "2022-01-03"
    },
    "ALL": {
-    "members": 40,
-    "z20": -0.099,
-    "percentile_2y": 11.1,
-    "date": "2026-11-12",
-    "days_with_ge5_members": 1269,
+    "members": 58,
+    "z20": -0.088,
+    "percentile_2y": 19.4,
+    "date": "2026-11-13",
+    "days_with_ge5_members": 1271,
     "first_day_ge5_members": "2022-01-03"
    }
   },
