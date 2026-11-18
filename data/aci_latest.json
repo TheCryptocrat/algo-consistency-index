@@ -1,88 +1,90 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-11-16 22:45",
+ "as_of": "2026-11-17 22:32",
  "status": "live",
- "readings_through": "2026-11-02",
- "scoreboard_through": "2026-11-13",
+ "readings_through": "2026-11-06",
+ "scoreboard_through": "2026-11-17",
  "public_url": "https://thecryptocrat.github.io/algo-consistency-index/",
  "probe_index": {
-  "date": "2026-11-02",
+  "date": "2026-11-06",
   "reading_variant": "pertrade",
   "symbols": 17,
   "label": "Hypothetical probe results on historical ticks with published costs; not investment performance",
   "families": {
    "TB": {
-    "reading_z": 0.094,
-    "percentile_2y": 79.4,
-    "legs": 160,
-    "trades_20d": 3920
+    "reading_z": 0.316,
+    "percentile_2y": 99.8,
+    "legs": 20,
+    "trades_20d": 508
    },
    "MR": {
-    "reading_z": 0.111,
-    "percentile_2y": 79.8,
-    "legs": 128,
-    "trades_20d": 3846,
+    "reading_z": 0.319,
+    "percentile_2y": 98.4,
+    "legs": 16,
+    "trades_20d": 467,
     "caveat": "Does not represent the library mean-reversion family; descriptive (audit 2026-10-28, rule 4: the probes track neither the library nor the live MR panel; the reading is kept as v0.2)"
    },
    "SC": {
-    "reading_z": -0.058,
-    "percentile_2y": 54.2,
-    "legs": 96,
-    "trades_20d": 958
+    "reading_z": -0.283,
+    "percentile_2y": 8.7,
+    "legs": 12,
+    "trades_20d": 120
    }
   },
-  "cost_regime_R_per_trade": 0.2759
+  "cost_regime_R_per_trade": 0.1643
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-11-16 22:23",
-  "data_through": "2026-11-13",
+  "as_of": "2026-11-17 22:18",
+  "data_through": "2026-11-17",
   "tiers": [
    "P1"
   ],
-  "trailing_sparse_days_dropped": [],
+  "trailing_sparse_days_dropped": [
+   "2026-11-18"
+  ],
   "membership": "all Bachelier accounts with a family tag and >=10 trading days (decision 2026-10-27); active = first appearance to last trade + 10 business days",
   "dd_budget_placeholder": true,
-  "sprt_calibration_fallback_accounts": 93,
+  "sprt_calibration_fallback_accounts": 94,
   "families": {
    "TB": {
-    "n_active": 20.0,
-    "breadth": 0.2381,
-    "mom_mean_z": -0.0738,
-    "mom_se": 0.1029,
-    "M": -0.7174,
-    "S": 67.1756,
-    "dd_load": 0.3172,
+    "n_active": 18.0,
+    "breadth": 0.3,
+    "mom_mean_z": -0.0429,
+    "mom_se": 0.0983,
+    "M": -0.4361,
+    "S": 78.1955,
+    "dd_load": 0.2079,
     "kill_count": 2.0,
-    "kill_share": 0.1,
-    "date": "2026-11-13",
-    "accounts": 29,
-    "S_history_days": 132,
+    "kill_share": 0.1111,
+    "date": "2026-11-17",
+    "accounts": 30,
+    "S_history_days": 134,
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    },
    "MR": {
     "n_active": 13.0,
-    "breadth": 0.4615,
-    "mom_mean_z": -0.0725,
-    "mom_se": 0.0599,
-    "M": -1.2108,
-    "S": 31.2057,
-    "dd_load": 0.321,
+    "breadth": 0.3846,
+    "mom_mean_z": -0.1164,
+    "mom_se": 0.058,
+    "M": -2.0059,
+    "S": 7.3944,
+    "dd_load": 0.3621,
     "kill_count": 3.0,
     "kill_share": 0.2308,
-    "date": "2026-11-13",
+    "date": "2026-11-17",
     "accounts": 28,
-    "S_history_days": 283,
+    "S_history_days": 285,
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    },
    "SC": {
     "n_active": 10.0,
     "breadth": 0.1,
     "mom_mean_z": -0.2078,
-    "mom_se": 0.0954,
-    "M": -2.1776,
-    "S": 11.3744,
+    "mom_se": 0.102,
+    "M": -2.0372,
+    "S": 12.3223,
     "dd_load": 0.4495,
     "kill_count": 4.0,
     "kill_share": 0.4,
@@ -92,38 +94,38 @@
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    }
   },
-  "headline_S": 36.59
+  "headline_S": 32.64
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-11-16 22:13",
-  "reading_date": "2026-10-30",
+  "as_of": "2026-11-17 22:08",
+  "reading_date": "2026-11-03",
   "data_through": {
-   "XAUUSD": "2026-11-02",
-   "US500": "2026-11-02",
-   "EURUSD": "2026-11-02",
-   "USDJPY": "2026-11-02",
-   "AUDUSD": "2026-11-02",
-   "AUDJPY": "2026-11-02",
-   "GBPJPY": "2026-11-02",
-   "US30": "2026-11-02",
-   "USDCHF": "2026-11-02",
-   "USTECH": "2026-10-30",
-   "AUDNZD": "2026-11-02",
-   "NZDUSD": "2026-11-02",
-   "USDCAD": "2026-11-02",
-   "GBPCHF": "2026-11-02",
-   "RUSS2000": "2026-11-02",
-   "ETHUSD": "2026-11-02",
-   "GBPUSD": "2026-11-02",
-   "EURJPY": "2026-10-30",
-   "BTCUSD": "2026-11-01",
-   "EURCHF": "2026-10-30",
-   "CADJPY": "2026-10-30",
-   "CHFJPY": "2026-10-30",
-   "AUDCAD": "2026-10-30",
-   "NZDJPY": "2026-10-30",
-   "EURAUD": "2026-10-30"
+   "XAUUSD": "2026-11-06",
+   "US500": "2026-11-04",
+   "EURUSD": "2026-11-05",
+   "USDJPY": "2026-11-05",
+   "AUDUSD": "2026-11-05",
+   "AUDJPY": "2026-11-04",
+   "GBPJPY": "2026-11-04",
+   "US30": "2026-11-04",
+   "USDCHF": "2026-11-04",
+   "USTECH": "2026-11-04",
+   "AUDNZD": "2026-11-04",
+   "NZDUSD": "2026-11-04",
+   "USDCAD": "2026-11-06",
+   "GBPCHF": "2026-11-05",
+   "RUSS2000": "2026-11-04",
+   "ETHUSD": "2026-11-04",
+   "GBPUSD": "2026-11-04",
+   "EURJPY": "2026-11-04",
+   "BTCUSD": "2026-11-04",
+   "EURCHF": "2026-11-04",
+   "CADJPY": "2026-11-06",
+   "CHFJPY": "2026-11-06",
+   "AUDCAD": "2026-11-03",
+   "NZDJPY": "2026-11-04",
+   "EURAUD": "2026-11-04"
   },
   "symbols": [
    "XAUUSD",
@@ -155,37 +157,37 @@
   "universe": 25,
   "weighting": "equal (exposure weights pending)",
   "features_z": {
-   "vol_ratio": 0.811,
-   "vol_of_vol": 0.321,
-   "gap_atr": 0.002,
-   "range_atr": 0.468,
-   "er10": -0.135,
-   "er20": -0.162,
-   "ac15_5d": -0.063,
-   "vr5": 0.09,
-   "bo_follow": -0.026,
-   "mr_hit": 0.383,
-   "sess_fid": -0.556,
-   "hl_time_dev": 0.236,
-   "spread_rel": -0.005,
-   "tick_rel": 1.394
+   "vol_ratio": 0.978,
+   "vol_of_vol": 0.216,
+   "gap_atr": -0.394,
+   "range_atr": 0.216,
+   "er10": -0.25,
+   "er20": -0.242,
+   "ac15_5d": -0.635,
+   "vr5": 0.13,
+   "bo_follow": -0.002,
+   "mr_hit": 0.565,
+   "sess_fid": -0.755,
+   "hl_time_dev": -0.287,
+   "spread_rel": -0.119,
+   "tick_rel": 0.884
   },
-  "drift": 4.638,
-  "drift_pct_vs_ref": 91.7,
+  "drift": 4.576,
+  "drift_pct_vs_ref": 91.1,
   "family_drift": {
-   "TB": 2.802,
-   "MR": 2.825,
-   "SC": 2.285
+   "TB": 2.531,
+   "MR": 2.644,
+   "SC": 2.185
   },
   "family_drift_pct_vs_ref": {
-   "TB": 50.2,
-   "MR": 40.6,
-   "SC": 42.9
+   "TB": 33.1,
+   "MR": 30.8,
+   "SC": 37.5
   },
   "what_moved": [
-   "The mean-reversion hit rate rose 0.9 sd over five days to the 86th percentile of 2021-2024 (favours MR; weighs on TB).",
-   "The session-shape fidelity fell 0.7 sd over five days to the 16th percentile of 2021-2024 (weighs on SC).",
-   "The breakout follow-through rate fell 0.6 sd over five days to the 47th percentile of 2021-2024 (favours MR; weighs on TB)."
+   "The daily range vs ATR rose 0.9 sd over five days to the 63rd percentile of 2021-2024.",
+   "The volatility ratio (5-day vs 63-day) rose 0.8 sd over five days to the 84th percentile of 2021-2024 (favours TB; weighs on MR, SC).",
+   "The tick intensity vs its 60-day median rose 0.8 sd over five days to the 81st percentile of 2021-2024 (weighs on SC)."
   ]
  },
  "nowcast": {
@@ -209,7 +211,7 @@
  },
  "benchmark_relative": {
   "label": "Descriptive comparison of live production accounts with their family's probe reading; not a forecast, not a sizing instruction",
-  "date": "2026-11-02",
+  "date": "2026-11-06",
   "definition": "alpha20 = mean of the account's daily z over the trailing 20 business days minus beta x the family probe reading z on the same date; beta = 1.0 for every family (fixed, not fitted); accounts active on the date with at least 15 of the 20 days active",
   "beta": {
    "TB": 1.0,
@@ -222,50 +224,45 @@
   "note": "Descriptive comparison of each live account with its family's probe reading; not a forecast, not a sizing instruction. The two sides are standardised differently (daily z of account returns against a two-year z of per-trade R), so alpha20 is a comparison, not a measured excess return.",
   "families": {
    "TB": {
-    "reading_z": 0.0945,
+    "reading_z": 0.316,
     "n_scored": 21,
-    "median_acct_z20": -0.1757,
-    "median_alpha20": -0.2702,
-    "alpha20_p25": -0.3911,
-    "alpha20_p75": -0.1682,
+    "median_acct_z20": -0.1591,
+    "median_alpha20": -0.4751,
+    "alpha20_p25": -0.6176,
+    "alpha20_p75": -0.3927,
     "share_above_benchmark": 0.0952
    },
    "MR": {
-    "reading_z": 0.1106,
+    "reading_z": 0.3189,
     "n_scored": 13,
-    "median_acct_z20": -0.1779,
-    "median_alpha20": -0.2885,
-    "alpha20_p25": -0.315,
-    "alpha20_p75": -0.1294,
-    "share_above_benchmark": 0.0769
+    "median_acct_z20": -0.1092,
+    "median_alpha20": -0.4281,
+    "alpha20_p25": -0.5692,
+    "alpha20_p75": -0.3924,
+    "share_above_benchmark": 0.0
    },
    "SC": {
-    "reading_z": -0.0575,
-    "n_scored": 10,
-    "median_acct_z20": -0.3392,
-    "median_alpha20": -0.2817,
-    "alpha20_p25": -0.3124,
-    "alpha20_p75": -0.0874,
-    "share_above_benchmark": 0.1
+    "reading_z": -0.2832,
+    "n_scored": 4
    }
   }
  },
  "external_panel": {
   "label": "Hypothetical model accounts; descriptive; not investment performance, not a forecast, not a sizing instruction",
-  "date": "2026-11-13",
+  "date": "2026-11-16",
   "source": "Collective2 General API v4 (read-only)",
   "route": "daily",
   "commission_plan": 0,
   "embargo_days": null,
-  "members": 255,
-  "note": "Hypothetical model accounts on Collective2 (forex and futures strategies; simulated fills, default commission plan); each strategy's daily return is the change in its own end-of-day model-account equity. Non-subscribers see a manager's record only after that manager's publication delay, so the panel's last day can lag the print. Aggregates only; individual strategies are not shown. Of the 746 strategies in the 2022-01-03 snapshot, 172 are no longer served by the API, among them 49 of the 173 forex or futures strategies with 30 or more trades at that date, so the panel's 22 dead members understate attrition and the 2022 cohort is not survivorship-free; strategies created after 2022-01-03 that died before the pull are also missing. 155 of the 255 members have no defined standardised return in the last 20 weekdays (flat equity, a series that ended, or a dead strategy); the automation share of the members is not available from the API's details record.",
+  "members": 256,
+  "note": "Hypothetical model accounts on Collective2 (forex and futures strategies; simulated fills, default commission plan); each strategy's daily return is the change in its own end-of-day model-account equity. Non-subscribers see a manager's record only after that manager's publication delay, so the panel's last day can lag the print. Aggregates only; individual strategies are not shown. Of the 746 strategies in the 2022-01-03 snapshot, 172 are no longer served by the API, among them 49 of the 173 forex or futures strategies with 30 or more trades at that date, so the panel's 22 dead members understate attrition and the 2022 cohort is not survivorship-free; strategies created after 2022-01-03 that died before the pull are also missing. 155 of the 256 members have no defined standardised return in the last 20 weekdays (flat equity, a series that ended, or a dead strategy); the automation share of the members is not available from the API's details record.",
   "definition": "Per strategy: daily return standardised by its own trailing 120-day sd (clipped at +-6); family return = equal-weight mean over the family's members with at least 5 members that day; 20-day = mean of the last 20 days (at least 15). Family tags come from each strategy's closed trades (panel-internal terciles, frozen).",
   "attrition": {
    "n_snapshot": 746,
    "n_unserved_snapshot": 172,
    "n_cohort_fxfut30": 173,
    "n_cohort_unserved": 49,
-   "n_members": 255,
+   "n_members": 256,
    "n_members_dead": 22,
    "n_members_without_recent_z": 155,
    "recent_window_weekdays": 20,
@@ -293,7 +290,7 @@
    }
   },
   "tag_agreement": {
-   "n_trade_tagged": 125,
+   "n_trade_tagged": 126,
    "n_desc_tagged": 44,
    "n_both_tagged": 21,
    "accuracy": 0.1905,
@@ -301,35 +298,35 @@
   },
   "families": {
    "TB": {
-    "members": 6,
-    "z20": -0.101,
-    "percentile_2y": 12.7,
-    "date": "2026-11-13",
-    "days_with_ge5_members": 1271,
+    "members": 10,
+    "z20": -0.084,
+    "percentile_2y": 17.9,
+    "date": "2026-11-16",
+    "days_with_ge5_members": 1272,
     "first_day_ge5_members": "2022-01-03"
    },
    "MR": {
-    "members": 20,
-    "z20": 0.006,
-    "percentile_2y": 71.6,
-    "date": "2026-11-13",
-    "days_with_ge5_members": 1271,
+    "members": 26,
+    "z20": -0.034,
+    "percentile_2y": 34.5,
+    "date": "2026-11-16",
+    "days_with_ge5_members": 1272,
     "first_day_ge5_members": "2022-01-03"
    },
    "SC": {
-    "members": 5,
-    "z20": 0.059,
-    "percentile_2y": 78.0,
-    "date": "2026-11-13",
-    "days_with_ge5_members": 1271,
+    "members": 14,
+    "z20": 0.09,
+    "percentile_2y": 87.3,
+    "date": "2026-11-16",
+    "days_with_ge5_members": 1272,
     "first_day_ge5_members": "2022-01-03"
    },
    "ALL": {
-    "members": 64,
-    "z20": -0.086,
-    "percentile_2y": 20.6,
-    "date": "2026-11-13",
-    "days_with_ge5_members": 1271,
+    "members": 89,
+    "z20": -0.099,
+    "percentile_2y": 10.9,
+    "date": "2026-11-16",
+    "days_with_ge5_members": 1272,
     "first_day_ge5_members": "2022-01-03"
    }
   },
