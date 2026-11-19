@@ -1,48 +1,48 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-11-17 22:32",
+ "as_of": "2026-11-18 22:46",
  "status": "live",
- "readings_through": "2026-11-06",
- "scoreboard_through": "2026-11-17",
+ "readings_through": "2026-11-11",
+ "scoreboard_through": "2026-11-18",
  "public_url": "https://thecryptocrat.github.io/algo-consistency-index/",
  "probe_index": {
-  "date": "2026-11-06",
+  "date": "2026-11-11",
   "reading_variant": "pertrade",
   "symbols": 17,
   "label": "Hypothetical probe results on historical ticks with published costs; not investment performance",
   "families": {
    "TB": {
-    "reading_z": 0.316,
+    "reading_z": 0.533,
     "percentile_2y": 99.8,
-    "legs": 20,
-    "trades_20d": 508
+    "legs": 30,
+    "trades_20d": 774
    },
    "MR": {
-    "reading_z": 0.319,
-    "percentile_2y": 98.4,
-    "legs": 16,
-    "trades_20d": 467,
+    "reading_z": 0.003,
+    "percentile_2y": 55.0,
+    "legs": 24,
+    "trades_20d": 727,
     "caveat": "Does not represent the library mean-reversion family; descriptive (audit 2026-10-28, rule 4: the probes track neither the library nor the live MR panel; the reading is kept as v0.2)"
    },
    "SC": {
-    "reading_z": -0.283,
-    "percentile_2y": 8.7,
-    "legs": 12,
-    "trades_20d": 120
+    "reading_z": 0.111,
+    "percentile_2y": 80.4,
+    "legs": 18,
+    "trades_20d": 180
    }
   },
-  "cost_regime_R_per_trade": 0.1643
+  "cost_regime_R_per_trade": 0.1785
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-11-17 22:18",
-  "data_through": "2026-11-17",
+  "as_of": "2026-11-18 22:30",
+  "data_through": "2026-11-18",
   "tiers": [
    "P1"
   ],
   "trailing_sparse_days_dropped": [
-   "2026-11-18"
+   "2026-11-19"
   ],
   "membership": "all Bachelier accounts with a family tag and >=10 trading days (decision 2026-10-27); active = first appearance to last trade + 10 business days",
   "dd_budget_placeholder": true,
@@ -50,82 +50,82 @@
   "families": {
    "TB": {
     "n_active": 18.0,
-    "breadth": 0.3,
-    "mom_mean_z": -0.0429,
-    "mom_se": 0.0983,
-    "M": -0.4361,
-    "S": 78.1955,
-    "dd_load": 0.2079,
-    "kill_count": 2.0,
-    "kill_share": 0.1111,
-    "date": "2026-11-17",
+    "breadth": 0.35,
+    "mom_mean_z": -0.0485,
+    "mom_se": 0.1068,
+    "M": -0.4536,
+    "S": 77.6119,
+    "dd_load": 0.214,
+    "kill_count": 3.0,
+    "kill_share": 0.1667,
+    "date": "2026-11-18",
     "accounts": 30,
-    "S_history_days": 134,
+    "S_history_days": 135,
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    },
    "MR": {
     "n_active": 13.0,
     "breadth": 0.3846,
-    "mom_mean_z": -0.1164,
-    "mom_se": 0.058,
-    "M": -2.0059,
-    "S": 7.3944,
+    "mom_mean_z": -0.141,
+    "mom_se": 0.0554,
+    "M": -2.5451,
+    "S": 0.7018,
     "dd_load": 0.3621,
-    "kill_count": 3.0,
-    "kill_share": 0.2308,
-    "date": "2026-11-17",
+    "kill_count": 4.0,
+    "kill_share": 0.3077,
+    "date": "2026-11-18",
     "accounts": 28,
-    "S_history_days": 285,
+    "S_history_days": 286,
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    },
    "SC": {
-    "n_active": 10.0,
-    "breadth": 0.1,
-    "mom_mean_z": -0.2078,
-    "mom_se": 0.102,
-    "M": -2.0372,
-    "S": 12.3223,
-    "dd_load": 0.4495,
-    "kill_count": 4.0,
-    "kill_share": 0.4,
-    "date": "2026-11-04",
+    "n_active": 5.0,
+    "breadth": 0.2,
+    "mom_mean_z": -0.08,
+    "mom_se": 0.0978,
+    "M": -0.818,
+    "S": 48.8688,
+    "dd_load": 0.4359,
+    "kill_count": 0.0,
+    "kill_share": 0.0,
+    "date": "2026-11-18",
     "accounts": 66,
-    "S_history_days": 212,
+    "S_history_days": 222,
     "S_note": "percentile over the family's own M history (expanding, spec: trailing 2 years once available)"
    }
   },
-  "headline_S": 32.64
+  "headline_S": 42.39
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-11-17 22:08",
-  "reading_date": "2026-11-03",
+  "as_of": "2026-11-18 22:19",
+  "reading_date": "2026-11-04",
   "data_through": {
-   "XAUUSD": "2026-11-06",
-   "US500": "2026-11-04",
-   "EURUSD": "2026-11-05",
-   "USDJPY": "2026-11-05",
-   "AUDUSD": "2026-11-05",
-   "AUDJPY": "2026-11-04",
-   "GBPJPY": "2026-11-04",
-   "US30": "2026-11-04",
-   "USDCHF": "2026-11-04",
-   "USTECH": "2026-11-04",
-   "AUDNZD": "2026-11-04",
-   "NZDUSD": "2026-11-04",
-   "USDCAD": "2026-11-06",
-   "GBPCHF": "2026-11-05",
-   "RUSS2000": "2026-11-04",
-   "ETHUSD": "2026-11-04",
-   "GBPUSD": "2026-11-04",
-   "EURJPY": "2026-11-04",
-   "BTCUSD": "2026-11-04",
-   "EURCHF": "2026-11-04",
-   "CADJPY": "2026-11-06",
-   "CHFJPY": "2026-11-06",
-   "AUDCAD": "2026-11-03",
-   "NZDJPY": "2026-11-04",
-   "EURAUD": "2026-11-04"
+   "XAUUSD": "2026-11-11",
+   "US500": "2026-11-06",
+   "EURUSD": "2026-11-11",
+   "USDJPY": "2026-11-10",
+   "AUDUSD": "2026-11-10",
+   "AUDJPY": "2026-11-06",
+   "GBPJPY": "2026-11-10",
+   "US30": "2026-11-09",
+   "USDCHF": "2026-11-10",
+   "USTECH": "2026-11-10",
+   "AUDNZD": "2026-11-10",
+   "NZDUSD": "2026-11-09",
+   "USDCAD": "2026-11-11",
+   "GBPCHF": "2026-11-09",
+   "RUSS2000": "2026-11-09",
+   "ETHUSD": "2026-11-09",
+   "GBPUSD": "2026-11-10",
+   "EURJPY": "2026-11-09",
+   "BTCUSD": "2026-11-10",
+   "EURCHF": "2026-11-09",
+   "CADJPY": "2026-11-12",
+   "CHFJPY": "2026-11-10",
+   "AUDCAD": "2026-11-04",
+   "NZDJPY": "2026-11-10",
+   "EURAUD": "2026-11-11"
   },
   "symbols": [
    "XAUUSD",
@@ -157,37 +157,37 @@
   "universe": 25,
   "weighting": "equal (exposure weights pending)",
   "features_z": {
-   "vol_ratio": 0.978,
-   "vol_of_vol": 0.216,
-   "gap_atr": -0.394,
-   "range_atr": 0.216,
-   "er10": -0.25,
-   "er20": -0.242,
-   "ac15_5d": -0.635,
-   "vr5": 0.13,
-   "bo_follow": -0.002,
-   "mr_hit": 0.565,
-   "sess_fid": -0.755,
-   "hl_time_dev": -0.287,
-   "spread_rel": -0.119,
-   "tick_rel": 0.884
+   "vol_ratio": 0.986,
+   "vol_of_vol": 0.292,
+   "gap_atr": 0.419,
+   "range_atr": 1.392,
+   "er10": -0.435,
+   "er20": -0.154,
+   "ac15_5d": -0.362,
+   "vr5": 0.029,
+   "bo_follow": 0.251,
+   "mr_hit": 0.297,
+   "sess_fid": -1.223,
+   "hl_time_dev": 0.081,
+   "spread_rel": 0.298,
+   "tick_rel": 2.07
   },
-  "drift": 4.576,
-  "drift_pct_vs_ref": 91.1,
+  "drift": 4.653,
+  "drift_pct_vs_ref": 91.8,
   "family_drift": {
-   "TB": 2.531,
-   "MR": 2.644,
-   "SC": 2.185
+   "TB": 2.442,
+   "MR": 2.639,
+   "SC": 2.842
   },
   "family_drift_pct_vs_ref": {
-   "TB": 33.1,
-   "MR": 30.8,
-   "SC": 37.5
+   "TB": 29.0,
+   "MR": 30.4,
+   "SC": 71.0
   },
   "what_moved": [
-   "The daily range vs ATR rose 0.9 sd over five days to the 63rd percentile of 2021-2024.",
-   "The volatility ratio (5-day vs 63-day) rose 0.8 sd over five days to the 84th percentile of 2021-2024 (favours TB; weighs on MR, SC).",
-   "The tick intensity vs its 60-day median rose 0.8 sd over five days to the 81st percentile of 2021-2024 (weighs on SC)."
+   "The tick intensity vs its 60-day median rose 1.5 sd over five days to the 92nd percentile of 2021-2024 (weighs on SC).",
+   "The daily range vs ATR rose 1.4 sd over five days to the 97th percentile of 2021-2024.",
+   "The spread vs its 60-day median rose 0.9 sd over five days to the 68th percentile of 2021-2024 (weighs on TB, MR, SC)."
   ]
  },
  "nowcast": {
@@ -211,7 +211,7 @@
  },
  "benchmark_relative": {
   "label": "Descriptive comparison of live production accounts with their family's probe reading; not a forecast, not a sizing instruction",
-  "date": "2026-11-06",
+  "date": "2026-11-11",
   "definition": "alpha20 = mean of the account's daily z over the trailing 20 business days minus beta x the family probe reading z on the same date; beta = 1.0 for every family (fixed, not fitted); accounts active on the date with at least 15 of the 20 days active",
   "beta": {
    "TB": 1.0,
@@ -224,32 +224,37 @@
   "note": "Descriptive comparison of each live account with its family's probe reading; not a forecast, not a sizing instruction. The two sides are standardised differently (daily z of account returns against a two-year z of per-trade R), so alpha20 is a comparison, not a measured excess return.",
   "families": {
    "TB": {
-    "reading_z": 0.316,
+    "reading_z": 0.533,
     "n_scored": 21,
-    "median_acct_z20": -0.1591,
-    "median_alpha20": -0.4751,
-    "alpha20_p25": -0.6176,
-    "alpha20_p75": -0.3927,
-    "share_above_benchmark": 0.0952
+    "median_acct_z20": -0.1283,
+    "median_alpha20": -0.6613,
+    "alpha20_p25": -0.7701,
+    "alpha20_p75": -0.5683,
+    "share_above_benchmark": 0.0476
    },
    "MR": {
-    "reading_z": 0.3189,
+    "reading_z": 0.0032,
     "n_scored": 13,
-    "median_acct_z20": -0.1092,
-    "median_alpha20": -0.4281,
-    "alpha20_p25": -0.5692,
-    "alpha20_p75": -0.3924,
-    "share_above_benchmark": 0.0
+    "median_acct_z20": -0.1189,
+    "median_alpha20": -0.1221,
+    "alpha20_p25": -0.2312,
+    "alpha20_p75": -0.0327,
+    "share_above_benchmark": 0.2308
    },
    "SC": {
-    "reading_z": -0.2832,
-    "n_scored": 4
+    "reading_z": 0.1106,
+    "n_scored": 5,
+    "median_acct_z20": -0.191,
+    "median_alpha20": -0.3016,
+    "alpha20_p25": -0.32,
+    "alpha20_p75": -0.2401,
+    "share_above_benchmark": 0.0
    }
   }
  },
  "external_panel": {
   "label": "Hypothetical model accounts; descriptive; not investment performance, not a forecast, not a sizing instruction",
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "source": "Collective2 General API v4 (read-only)",
   "route": "daily",
   "commission_plan": 0,
@@ -298,35 +303,35 @@
   },
   "families": {
    "TB": {
-    "members": 10,
-    "z20": -0.084,
-    "percentile_2y": 17.9,
-    "date": "2026-11-16",
-    "days_with_ge5_members": 1272,
+    "members": 5,
+    "z20": -0.065,
+    "percentile_2y": 26.6,
+    "date": "2026-11-17",
+    "days_with_ge5_members": 1273,
     "first_day_ge5_members": "2022-01-03"
    },
    "MR": {
-    "members": 26,
-    "z20": -0.034,
-    "percentile_2y": 34.5,
-    "date": "2026-11-16",
-    "days_with_ge5_members": 1272,
+    "members": 18,
+    "z20": -0.063,
+    "percentile_2y": 15.1,
+    "date": "2026-11-17",
+    "days_with_ge5_members": 1273,
     "first_day_ge5_members": "2022-01-03"
    },
    "SC": {
-    "members": 14,
-    "z20": 0.09,
-    "percentile_2y": 87.3,
-    "date": "2026-11-16",
-    "days_with_ge5_members": 1272,
+    "members": 13,
+    "z20": 0.092,
+    "percentile_2y": 87.7,
+    "date": "2026-11-17",
+    "days_with_ge5_members": 1273,
     "first_day_ge5_members": "2022-01-03"
    },
    "ALL": {
-    "members": 89,
-    "z20": -0.099,
+    "members": 70,
+    "z20": -0.1,
     "percentile_2y": 10.9,
-    "date": "2026-11-16",
-    "days_with_ge5_members": 1272,
+    "date": "2026-11-17",
+    "days_with_ge5_members": 1273,
     "first_day_ge5_members": "2022-01-03"
    }
   },
@@ -374,7 +379,42 @@
     }
    }
   },
-  "history_csv": "data/external_panel_history.csv"
+  "history_csv": "data/external_panel_history.csv",
+  "provisional_from": "2026-11-04",
+  "provisional_weekdays": 10,
+  "t1_external_update": {
+   "run_date": "2026-11-18",
+   "probe_readings_through": "2026-11-06",
+   "panel_last": "2026-11-17",
+   "blocks": 62,
+   "file": "aci/phase1/step5/t1_external_c2_update_2026-11-18.csv",
+   "families": {
+    "TB": {
+     "rho": -0.132,
+     "ci90": [
+      -0.259,
+      0.012
+     ],
+     "verdict": "FAIL"
+    },
+    "MR": {
+     "rho": 0.1,
+     "ci90": [
+      -0.057,
+      0.25
+     ],
+     "verdict": "FAIL"
+    },
+    "SC": {
+     "rho": 0.049,
+     "ci90": [
+      -0.079,
+      0.185
+     ],
+     "verdict": "FAIL"
+    }
+   }
+  }
  },
  "disclaimer": "Not investment advice. No sizing instruction is published. Probe results are hypothetical; benchmark-relative figures are a comparison, not a forecast."
 }
