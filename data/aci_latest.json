@@ -1,7 +1,7 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-11-21 22:25",
+ "as_of": "2026-11-22 22:28",
  "status": "live",
  "readings_through": "2026-11-20",
  "scoreboard_through": "2026-11-20",
@@ -40,7 +40,7 @@
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-11-21 22:09",
+  "as_of": "2026-11-22 22:09",
   "data_through": "2026-11-20",
   "tiers": [
    "P1"
@@ -100,7 +100,7 @@
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-11-21 21:58",
+  "as_of": "2026-11-22 21:58",
   "reading_date": "2026-11-20",
   "data_through": {
    "XAUUSD": "2026-11-20",
@@ -118,10 +118,10 @@
    "USDCAD": "2026-11-20",
    "GBPCHF": "2026-11-20",
    "RUSS2000": "2026-11-20",
-   "ETHUSD": "2026-11-21",
+   "ETHUSD": "2026-11-22",
    "GBPUSD": "2026-11-20",
    "EURJPY": "2026-11-20",
-   "BTCUSD": "2026-11-21",
+   "BTCUSD": "2026-11-22",
    "EURCHF": "2026-11-20",
    "CADJPY": "2026-11-20",
    "CHFJPY": "2026-11-20",
@@ -308,15 +308,15 @@
   "families": {
    "TB": {
     "members": 8,
-    "z20": -0.108,
-    "percentile_2y": 10.7,
+    "z20": -0.104,
+    "percentile_2y": 12.3,
     "date": "2026-11-20",
     "days_with_ge5_members": 1276,
     "first_day_ge5_members": "2022-01-03"
    },
    "MR": {
-    "members": 20,
-    "z20": -0.226,
+    "members": 21,
+    "z20": -0.213,
     "percentile_2y": 0.0,
     "date": "2026-11-20",
     "days_with_ge5_members": 1276,
@@ -324,16 +324,16 @@
    },
    "SC": {
     "members": 12,
-    "z20": 0.073,
-    "percentile_2y": 82.9,
+    "z20": 0.072,
+    "percentile_2y": 82.3,
     "date": "2026-11-20",
     "days_with_ge5_members": 1276,
     "first_day_ge5_members": "2022-01-03"
    },
    "ALL": {
-    "members": 72,
-    "z20": -0.157,
-    "percentile_2y": 0.4,
+    "members": 75,
+    "z20": -0.153,
+    "percentile_2y": 0.6,
     "date": "2026-11-20",
     "days_with_ge5_members": 1276,
     "first_day_ge5_members": "2022-01-03"
@@ -421,10 +421,10 @@
   },
   "revisions_csv": "data/external_panel_revisions.csv",
   "revision_check": {
-   "print_date": "2026-11-21",
-   "base_print": "2026-11-20",
-   "rows_revised": 4,
-   "oldest_revised_date": "2026-11-13",
+   "print_date": "2026-11-22",
+   "base_print": "2026-11-21",
+   "rows_revised": 3,
+   "oldest_revised_date": "2026-11-16",
    "rows_revised_before_window": 0,
    "t1_verdict_changed": 0,
    "entry_rule_met": 0,
