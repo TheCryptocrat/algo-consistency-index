@@ -1,18 +1,18 @@
 {
  "schema": 1,
- "generated_et": "2026-11-22 22:28:52",
+ "generated_et": "2026-11-23 22:47:43",
  "note": "Health of the newest print. Dates are broker days (New York + 7 h; a day closes at 17:00 New York). Lags count broker weekdays behind the last closed broker day.",
  "last_print": {
-  "date": "2026-11-22",
-  "started_et": "2026-11-22 21:45:01",
-  "finished_et": "2026-11-22 22:28",
+  "date": "2026-11-23",
+  "started_et": "2026-11-23 21:45:04",
+  "finished_et": "2026-11-23 22:47",
   "status": "ok",
   "failed_step": null,
   "exit_code": 0,
   "steps": [
    {
     "step": "tick_feed",
-    "seconds": 0,
+    "seconds": 1111,
     "result": "ok"
    },
    {
@@ -27,7 +27,7 @@
    },
    {
     "step": "tickwalk",
-    "seconds": 636,
+    "seconds": 634,
     "result": "ok"
    },
    {
@@ -52,7 +52,7 @@
    },
    {
     "step": "c2_pull",
-    "seconds": 1154,
+    "seconds": 1173,
     "result": "ok"
    },
    {
@@ -67,21 +67,21 @@
    },
    {
     "step": "alerts",
-    "seconds": 1,
+    "seconds": 0,
     "result": "ok"
    },
    {
     "step": "status",
-    "seconds": 0,
+    "seconds": 1,
     "result": "ok"
    }
   ],
   "consequence": null
  },
- "last_closed_broker_day": "2026-11-22",
+ "last_closed_broker_day": "2026-11-23",
  "published": {
-  "as_of": "2026-11-22 22:28",
-  "readings_through": "2026-11-20",
+  "as_of": "2026-11-23 22:47",
+  "readings_through": "2026-11-23",
   "scoreboard_through": "2026-11-20",
   "market_layer_through": "2026-11-20",
   "external_panel_as_of": "2026-11-20",
@@ -89,11 +89,11 @@
  },
  "lag_broker_days": {
   "readings": 0,
-  "scoreboard": 0,
-  "market_layer": 0
+  "scoreboard": 1,
+  "market_layer": 1
  },
  "probe_completeness": {
-  "date": "2026-11-20",
+  "date": "2026-11-23",
   "n_symbols": 17,
   "of": 17,
   "complete": true,
@@ -101,138 +101,138 @@
  },
  "tick_feed": {
   "snapshot_through": "2026-11-22",
-  "snapshot_written_et": "2026-11-22T21:45:01",
+  "snapshot_written_et": "2026-11-23T22:03:35",
   "symbols": {
    "AUDCAD": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "AUDJPY": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "AUDNZD": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "AUDUSD": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "BTCUSD": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "CADJPY": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "CHFJPY": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "ETHUSD": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "EURAUD": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "EURCHF": {
     "through": "2026-11-22",
-    "lag_broker_days": 0,
+    "lag_broker_days": 1,
     "in_probe_basket": false
    },
    "EURJPY": {
     "through": "2026-11-22",
-    "lag_broker_days": 0,
+    "lag_broker_days": 1,
     "in_probe_basket": false
    },
    "EURUSD": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "GBPCHF": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "GBPJPY": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "GBPUSD": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "NZDJPY": {
     "through": "2026-11-22",
-    "lag_broker_days": 0,
+    "lag_broker_days": 1,
     "in_probe_basket": false
    },
    "NZDUSD": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "RUSS2000": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "US30": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "US500": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "USDCAD": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "USDCHF": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "USDJPY": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "USTECH": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "XAUUSD": {
-    "through": "2026-11-22",
+    "through": "2026-11-23",
     "lag_broker_days": 0,
     "in_probe_basket": true
    }
   },
   "symbols_lagging_over_2_broker_days": [],
   "last_feed_run": {
-   "as_of_et": "2026-11-22T21:45:01",
-   "through_target": "2026-11-22",
+   "as_of_et": "2026-11-23T21:45:04",
+   "through_target": "2026-11-23",
    "commit_through": "2026-11-22"
   }
  },
@@ -242,7 +242,7 @@
   "alive_members": 272,
   "refreshed": 272,
   "stale_not_refreshed": 0,
-  "pull_finished_utc": "2026-11-23T03:28:47"
+  "pull_finished_utc": "2026-11-24T03:47:38"
  },
  "alerts": []
 }

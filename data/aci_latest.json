@@ -1,13 +1,13 @@
 {
  "methodology_version": "0.2",
  "live_since": "2026-10-26",
- "as_of": "2026-11-22 22:28",
+ "as_of": "2026-11-23 22:47",
  "status": "live",
- "readings_through": "2026-11-20",
+ "readings_through": "2026-11-23",
  "scoreboard_through": "2026-11-20",
  "public_url": "https://thecryptocrat.github.io/algo-consistency-index/",
  "probe_index": {
-  "date": "2026-11-20",
+  "date": "2026-11-23",
   "reading_variant": "pertrade",
   "symbols": 17,
   "n_symbols": 17,
@@ -17,30 +17,30 @@
   "label": "Hypothetical probe results on historical ticks with published costs; not investment performance",
   "families": {
    "TB": {
-    "reading_z": -0.025,
-    "percentile_2y": 49.2,
+    "reading_z": 0.055,
+    "percentile_2y": 68.7,
     "legs": 170,
-    "trades_20d": 4089
+    "trades_20d": 4094
    },
    "MR": {
-    "reading_z": -0.136,
-    "percentile_2y": 20.6,
+    "reading_z": -0.2,
+    "percentile_2y": 11.1,
     "legs": 136,
-    "trades_20d": 4104,
+    "trades_20d": 4112,
     "caveat": "Does not represent the library mean-reversion family; descriptive (audit 2026-10-28, rule 4: the probes track neither the library nor the live MR panel; the reading is kept as v0.2)"
    },
    "SC": {
-    "reading_z": 0.103,
-    "percentile_2y": 79.0,
+    "reading_z": 0.192,
+    "percentile_2y": 90.7,
     "legs": 102,
     "trades_20d": 1015
    }
   },
-  "cost_regime_R_per_trade": 0.2331
+  "cost_regime_R_per_trade": 0.2286
  },
  "scoreboard": {
   "label": "Coincident; live production accounts; lagging by construction",
-  "as_of": "2026-11-22 22:09",
+  "as_of": "2026-11-23 22:28",
   "data_through": "2026-11-20",
   "tiers": [
    "P1"
@@ -100,34 +100,34 @@
  },
  "pattern_integrity": {
   "label": "Leading candidate features; descriptive until T2 passes",
-  "as_of": "2026-11-22 21:58",
+  "as_of": "2026-11-23 22:17",
   "reading_date": "2026-11-20",
   "data_through": {
-   "XAUUSD": "2026-11-20",
-   "US500": "2026-11-20",
-   "EURUSD": "2026-11-20",
-   "USDJPY": "2026-11-20",
-   "AUDUSD": "2026-11-20",
-   "AUDJPY": "2026-11-20",
-   "GBPJPY": "2026-11-20",
-   "US30": "2026-11-20",
-   "USDCHF": "2026-11-20",
-   "USTECH": "2026-11-20",
-   "AUDNZD": "2026-11-20",
-   "NZDUSD": "2026-11-20",
-   "USDCAD": "2026-11-20",
-   "GBPCHF": "2026-11-20",
-   "RUSS2000": "2026-11-20",
-   "ETHUSD": "2026-11-22",
-   "GBPUSD": "2026-11-20",
+   "XAUUSD": "2026-11-23",
+   "US500": "2026-11-23",
+   "EURUSD": "2026-11-23",
+   "USDJPY": "2026-11-23",
+   "AUDUSD": "2026-11-23",
+   "AUDJPY": "2026-11-23",
+   "GBPJPY": "2026-11-23",
+   "US30": "2026-11-23",
+   "USDCHF": "2026-11-23",
+   "USTECH": "2026-11-23",
+   "AUDNZD": "2026-11-23",
+   "NZDUSD": "2026-11-23",
+   "USDCAD": "2026-11-23",
+   "GBPCHF": "2026-11-23",
+   "RUSS2000": "2026-11-23",
+   "ETHUSD": "2026-11-23",
+   "GBPUSD": "2026-11-23",
    "EURJPY": "2026-11-20",
-   "BTCUSD": "2026-11-22",
+   "BTCUSD": "2026-11-23",
    "EURCHF": "2026-11-20",
-   "CADJPY": "2026-11-20",
-   "CHFJPY": "2026-11-20",
-   "AUDCAD": "2026-11-20",
+   "CADJPY": "2026-11-23",
+   "CHFJPY": "2026-11-23",
+   "AUDCAD": "2026-11-23",
    "NZDJPY": "2026-11-20",
-   "EURAUD": "2026-11-20"
+   "EURAUD": "2026-11-23"
   },
   "symbols": [
    "XAUUSD",
@@ -167,23 +167,23 @@
    "er20": 0.782,
    "ac15_5d": -0.706,
    "vr5": 0.147,
-   "bo_follow": 0.152,
-   "mr_hit": 0.484,
+   "bo_follow": 0.047,
+   "mr_hit": 0.534,
    "sess_fid": -0.694,
    "hl_time_dev": 0.603,
    "spread_rel": -0.873,
    "tick_rel": 2.227
   },
-  "drift": 4.527,
+  "drift": 4.523,
   "drift_pct_vs_ref": 91.1,
   "family_drift": {
-   "TB": 2.558,
-   "MR": 2.576,
+   "TB": 2.54,
+   "MR": 2.557,
    "SC": 3.055
   },
   "family_drift_pct_vs_ref": {
-   "TB": 34.2,
-   "MR": 26.5,
+   "TB": 33.9,
+   "MR": 25.6,
    "SC": 78.0
   },
   "what_moved": [
@@ -228,30 +228,30 @@
   "note": "Descriptive comparison of each live account with its family's probe reading; not a forecast, not a sizing instruction. The two sides are standardised differently (daily z of account returns against a two-year z of per-trade R), so alpha20 is a comparison, not a measured excess return.",
   "families": {
    "TB": {
-    "reading_z": -0.0246,
+    "reading_z": -0.0245,
     "n_scored": 18,
     "median_acct_z20": -0.0615,
-    "median_alpha20": -0.0369,
+    "median_alpha20": -0.037,
     "alpha20_p25": -0.1711,
-    "alpha20_p75": 0.0251,
+    "alpha20_p75": 0.025,
     "share_above_benchmark": 0.3333
    },
    "MR": {
-    "reading_z": -0.1362,
+    "reading_z": -0.1369,
     "n_scored": 12,
     "median_acct_z20": -0.1275,
-    "median_alpha20": 0.0086,
-    "alpha20_p25": -0.0947,
-    "alpha20_p75": 0.0621,
+    "median_alpha20": 0.0093,
+    "alpha20_p25": -0.094,
+    "alpha20_p75": 0.0628,
     "share_above_benchmark": 0.6667
    },
    "SC": {
-    "reading_z": 0.1029,
+    "reading_z": 0.12,
     "n_scored": 5,
     "median_acct_z20": -0.1128,
-    "median_alpha20": -0.2157,
-    "alpha20_p25": -0.3204,
-    "alpha20_p75": -0.1761,
+    "median_alpha20": -0.2328,
+    "alpha20_p25": -0.3375,
+    "alpha20_p75": -0.1932,
     "share_above_benchmark": 0.0
    }
   }
@@ -307,16 +307,16 @@
   },
   "families": {
    "TB": {
-    "members": 8,
-    "z20": -0.104,
-    "percentile_2y": 12.3,
+    "members": 10,
+    "z20": -0.097,
+    "percentile_2y": 13.3,
     "date": "2026-11-20",
     "days_with_ge5_members": 1276,
     "first_day_ge5_members": "2022-01-03"
    },
    "MR": {
-    "members": 21,
-    "z20": -0.213,
+    "members": 24,
+    "z20": -0.197,
     "percentile_2y": 0.0,
     "date": "2026-11-20",
     "days_with_ge5_members": 1276,
@@ -331,8 +331,8 @@
     "first_day_ge5_members": "2022-01-03"
    },
    "ALL": {
-    "members": 75,
-    "z20": -0.153,
+    "members": 79,
+    "z20": -0.15,
     "percentile_2y": 0.6,
     "date": "2026-11-20",
     "days_with_ge5_members": 1276,
@@ -421,8 +421,8 @@
   },
   "revisions_csv": "data/external_panel_revisions.csv",
   "revision_check": {
-   "print_date": "2026-11-22",
-   "base_print": "2026-11-21",
+   "print_date": "2026-11-23",
+   "base_print": "2026-11-22",
    "rows_revised": 3,
    "oldest_revised_date": "2026-11-16",
    "rows_revised_before_window": 0,
