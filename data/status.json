@@ -1,11 +1,11 @@
 {
  "schema": 1,
- "generated_et": "2026-11-26 22:21:16",
+ "generated_et": "2026-11-27 22:34:00",
  "note": "Health of the newest print. Dates are broker days (New York + 7 h; a day closes at 17:00 New York). Lags count broker weekdays behind the last closed broker day.",
  "last_print": {
-  "date": "2026-11-26",
-  "started_et": "2026-11-26 21:45:03",
-  "finished_et": "2026-11-26 22:21",
+  "date": "2026-11-27",
+  "started_et": "2026-11-27 21:45:05",
+  "finished_et": "2026-11-27 22:34",
   "status": "ok",
   "failed_step": null,
   "exit_code": 0,
@@ -22,12 +22,12 @@
    },
    {
     "step": "layer2_17",
-    "seconds": 0,
+    "seconds": 1,
     "result": "ok"
    },
    {
     "step": "tickwalk",
-    "seconds": 638,
+    "seconds": 639,
     "result": "ok"
    },
    {
@@ -37,7 +37,7 @@
    },
    {
     "step": "registry",
-    "seconds": 6,
+    "seconds": 5,
     "result": "ok"
    },
    {
@@ -52,17 +52,17 @@
    },
    {
     "step": "c2_pull",
-    "seconds": 691,
+    "seconds": 1452,
     "result": "ok"
    },
    {
     "step": "c2_latest",
-    "seconds": 3,
+    "seconds": 4,
     "result": "ok"
    },
    {
     "step": "publish",
-    "seconds": 1,
+    "seconds": 0,
     "result": "ok"
    },
    {
@@ -78,171 +78,171 @@
   ],
   "consequence": null
  },
- "last_closed_broker_day": "2026-11-26",
+ "last_closed_broker_day": "2026-11-27",
  "published": {
-  "as_of": "2026-11-26 22:21",
-  "readings_through": "2026-11-26",
-  "scoreboard_through": "2026-11-25",
-  "market_layer_through": "2026-11-26",
-  "external_panel_as_of": "2026-11-25",
-  "provisional_from": "2026-11-12"
+  "as_of": "2026-11-27 22:33",
+  "readings_through": "2026-11-27",
+  "scoreboard_through": "2026-11-27",
+  "market_layer_through": "2026-11-27",
+  "external_panel_as_of": "2026-11-26",
+  "provisional_from": "2026-11-13"
  },
  "lag_broker_days": {
   "readings": 0,
-  "scoreboard": 1,
+  "scoreboard": 0,
   "market_layer": 0
  },
  "probe_completeness": {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "n_symbols": 17,
   "of": 17,
   "complete": true,
   "pending_days": []
  },
  "tick_feed": {
-  "snapshot_through": "2026-11-26",
-  "snapshot_written_et": "2026-11-26T21:45:03",
+  "snapshot_through": "2026-11-27",
+  "snapshot_written_et": "2026-11-27T21:45:05",
   "symbols": {
    "AUDCAD": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "AUDJPY": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "AUDNZD": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "AUDUSD": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "BTCUSD": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "CADJPY": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "CHFJPY": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "ETHUSD": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "EURAUD": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "EURCHF": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "EURJPY": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "EURUSD": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "GBPCHF": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "GBPJPY": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "GBPUSD": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "NZDJPY": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": false
    },
    "NZDUSD": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "RUSS2000": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "US30": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "US500": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "USDCAD": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "USDCHF": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "USDJPY": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "USTECH": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    },
    "XAUUSD": {
-    "through": "2026-11-26",
+    "through": "2026-11-27",
     "lag_broker_days": 0,
     "in_probe_basket": true
    }
   },
   "symbols_lagging_over_2_broker_days": [],
   "last_feed_run": {
-   "as_of_et": "2026-11-26T21:45:03",
-   "through_target": "2026-11-26",
-   "commit_through": "2026-11-26"
+   "as_of_et": "2026-11-27T21:45:05",
+   "through_target": "2026-11-27",
+   "commit_through": "2026-11-27"
   }
  },
  "external_panel": {
-  "as_of": "2026-11-25",
-  "provisional_from": "2026-11-12",
+  "as_of": "2026-11-26",
+  "provisional_from": "2026-11-13",
   "alive_members": 271,
-  "refreshed": 271,
-  "stale_not_refreshed": 0,
-  "pull_finished_utc": "2026-11-27T03:21:11"
+  "refreshed": 1,
+  "stale_not_refreshed": 270,
+  "pull_finished_utc": "2026-11-28T03:33:55"
  },
  "alerts": []
 }
